@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SendTracker.MainPage"
+             xmlns:viewmodel="clr-namespace:SendTracker.ViewModel"
+             xmlns:model="clr-namespace:SendTracker.Models"
+             x:DataType="viewmodel:MainViewModel"
+             Title="Send Tracker">
+
+    <ContentView HorizontalOptions="Fill" Padding="25">
+        <Grid>
+            <CollectionView ItemsSource="{Binding Routes}" SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Route">
+                        <Grid Padding="0, 5">
+                            <Frame>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, 
+                                        Path=OpenRoutePageCommand}" CommandParameter="{Binding Id}"/>
+                                </Frame.GestureRecognizers>
+                                <Label Text="{Binding .}" FontAttributes="Bold"/>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+            <ImageButton Aspect="AspectFit" Source="add.png" ZIndex="1" HeightRequest="60"
+                         WidthRequest="60" VerticalOptions="End" HorizontalOptions="End"
+                         Command="{Binding OpenNewRouteCommand}"
+                         BackgroundColor="{StaticResource PrimaryLight}"
+                         CornerRadius="30"/>
+        </Grid>
+    </ContentView>
+
+</ContentPage>

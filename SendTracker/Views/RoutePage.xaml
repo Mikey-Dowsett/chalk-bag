@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SendTracker.RoutePage"
+             xmlns:viewmodel="clr-namespace:SendTracker.ViewModel"
+             x:DataType="viewmodel:RoutePageViewModel"
+             Title="Route Page">
+    <ContentPage.Content >
+        <ScrollView Padding="25">
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" 
+                  RowSpacing="0" HorizontalOptions="Fill" VerticalOptions="Start">
+                <Frame Grid.Row="0" BackgroundColor="Transparent" HasShadow="False" 
+                       HorizontalOptions="Center" IsVisible="False">
+                    <Label  x:Name="SendName" FontAttributes="Bold" FontSize="30" />
+                </Frame>
+                <Frame Grid.Row="1" BackgroundColor="Transparent" HasShadow="False">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Climb Type: "/>
+                                <Span x:Name="ClimbType" FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Frame>
+                <Frame Grid.Row="2" BackgroundColor="Transparent" HasShadow="False">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Grade: "/>
+                                <Span x:Name="Grade" FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Frame>
+                <Frame Grid.Row="3" BackgroundColor="Transparent" HasShadow="False">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Attempts: "/>
+                                <Span x:Name="Attempts" FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Frame>
+                <Frame Grid.Row="4" BackgroundColor="Transparent" HasShadow="False">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Technique: "/>
+                                <Span x:Name="Technique" FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Frame>
+                <Frame Grid.Row="5" BackgroundColor="Transparent" HasShadow="False">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Rock Type: "/>
+                                <Span x:Name="RockType" FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Frame>
+                <Frame Grid.Row="6" x:Name="NotesFrame" BackgroundColor="Transparent" HasShadow="False">
+                    <Label x:Name="Notes"/>
+                </Frame>
+                <Frame Grid.Row="7" x:Name="PhotoFrame" BackgroundColor="Transparent" HasShadow="False">
+                    <Image x:Name="Photo"/>
+                </Frame>
+                <Button Grid.Row="8" Text="Delete Route" Command="{Binding DeleteCurrentRouteCommand}" 
+                        Margin="0, 5, 0, 20"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

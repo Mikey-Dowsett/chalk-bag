@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SendTracker</name>
+    </assembly>
+    <members>
+        <member name="T:SendTracker.ViewModel.MainViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:SendTracker.ViewModel.MainViewModel.openNewRouteCommand">
+            <summary>The backing field for <see cref="P:SendTracker.ViewModel.MainViewModel.OpenNewRouteCommand"/>.</summary>
+        </member>
+        <member name="P:SendTracker.ViewModel.MainViewModel.OpenNewRouteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SendTracker.ViewModel.MainViewModel.OpenNewRoute"/>.</summary>
+        </member>
+        <member name="F:SendTracker.ViewModel.MainViewModel.displayCurrentRoutesCommand">
+            <summary>The backing field for <see cref="P:SendTracker.ViewModel.MainViewModel.DisplayCurrentRoutesCommand"/>.</summary>
+        </member>
+        <member name="P:SendTracker.ViewModel.MainViewModel.DisplayCurrentRoutesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SendTracker.ViewModel.MainViewModel.DisplayCurrentRoutes"/>.</summary>
+        </member>
+        <member name="F:SendTracker.ViewModel.MainViewModel.deleteDataCommand">
+            <summary>The backing field for <see cref="P:SendTracker.ViewModel.MainViewModel.DeleteDataCommand"/>.</summary>
+        </member>
+        <member name="P:SendTracker.ViewModel.MainViewModel.DeleteDataCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SendTracker.ViewModel.MainViewModel.DeleteData"/>.</summary>
+        </member>
+        <member name="F:SendTracker.ViewModel.MainViewModel.openRoutePageCommand">
+            <summary>The backing field for <see cref="P:SendTracker.ViewModel.MainViewModel.OpenRoutePageCommand"/>.</summary>
+        </member>
+        <member name="P:SendTracker.ViewModel.MainViewModel.OpenRoutePageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:SendTracker.ViewModel.MainViewModel.OpenRoutePage(System.Int32)"/>.</summary>
+        </member>
+        <member name="T:SendTracker.ViewModel.NewRouteViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:SendTracker.ViewModel.NewRouteViewModel.PhotoButtonText">
+            <inheritdoc cref="F:SendTracker.ViewModel.NewRouteViewModel.photoButtonText"/>
+        </member>
+        <member name="F:SendTracker.ViewModel.NewRouteViewModel.takePhotoCommand">
+            <summary>The backing field for <see cref="P:SendTracker.ViewModel.NewRouteViewModel.TakePhotoCommand"/>.</summary>
+        </member>
+        <member name="P:SendTracker.ViewModel.NewRouteViewModel.TakePhotoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SendTracker.ViewModel.NewRouteViewModel.TakePhoto"/>.</summary>
+        </member>
+        <member name="F:SendTracker.ViewModel.NewRouteViewModel.saveRouteCommand">
+            <summary>The backing field for <see cref="P:SendTracker.ViewModel.NewRouteViewModel.SaveRouteCommand"/>.</summary>
+        </member>
+        <member name="P:SendTracker.ViewModel.NewRouteViewModel.SaveRouteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SendTracker.ViewModel.NewRouteViewModel.SaveRoute"/>.</summary>
+        </member>
+        <member name="T:SendTracker.ViewModel.RoutePageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:SendTracker.ViewModel.RoutePageViewModel.deleteCurrentRouteCommand">
+            <summary>The backing field for <see cref="P:SendTracker.ViewModel.RoutePageViewModel.DeleteCurrentRouteCommand"/>.</summary>
+        </member>
+        <member name="P:SendTracker.ViewModel.RoutePageViewModel.DeleteCurrentRouteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SendTracker.ViewModel.RoutePageViewModel.DeleteCurrentRoute"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PhotoButtonText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PhotoButtonText" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PhotoButtonText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PhotoButtonText" generated properties.</summary>
+        </member>
+    </members>
+</doc>

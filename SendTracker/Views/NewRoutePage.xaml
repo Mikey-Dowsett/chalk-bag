@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SendTracker.NewRoutePage"
+             xmlns:viewmodel="clr-namespace:SendTracker.ViewModel"
+             x:DataType="viewmodel:NewRouteViewModel"
+             Title="New Route">
+
+    <ScrollView HorizontalOptions="Fill" VerticalOptions="Center" Padding="25">
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions=".5*, .5*"
+              RowSpacing="20">
+            <Frame Grid.Row="0" Grid.ColumnSpan="2" IsVisible="False">
+                <Label Text="New Route" HorizontalTextAlignment="Center" FontSize="30" FontAttributes="Bold"/>
+            </Frame>
+            
+            <!-- <Frame Grid.Row="1" Grid.Column="0"> -->
+            <!--     <Label Text="Route Name" VerticalTextAlignment="Center" /> -->
+            <!-- </Frame> -->
+            <Frame Grid.Row="1" Grid.ColumnSpan="2">
+                <Entry x:Name="RouteName" Placeholder="Enter Name" Text="{Binding SendName}" />
+            </Frame>
+
+            <Frame Grid.Row="2" Grid.Column="0" >
+                <Label Text="Climb Type" VerticalTextAlignment="Center" />
+            </Frame>
+            <Frame Grid.Row="2" Grid.Column="1">
+                <Picker x:Name="ClimbType" Title="Select an option"
+                        SelectedItem="{Binding ClimbType}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Auto Belay</x:String>
+                            <x:String>Top Rope</x:String>
+                            <x:String>Lead</x:String>
+                            <x:String>Trad</x:String>
+                            <x:String>Free Solo</x:String>
+                            <x:String>Deep Water</x:String>
+                            <x:String>Boulder</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Frame>
+
+            <Frame Grid.Row="3" Grid.Column="0">
+                <Label Text="Grade" VerticalTextAlignment="Center" />
+            </Frame>
+            <Frame Grid.Row="3" Grid.Column="1" x:Name="YDSParent">
+                <Picker x:Name="YDS" Title="Select an option"
+                        SelectedItem="{Binding Grade}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>5.6</x:String>
+                            <x:String>5.7</x:String>
+                            <x:String>5.8</x:String>
+                            <x:String>5.9</x:String>
+                            <x:String>5.10a</x:String>
+                            <x:String>5.10b</x:String>
+                            <x:String>5.10c</x:String>
+                            <x:String>5.10d</x:String>
+                            <x:String>5.11a</x:String>
+                            <x:String>5.11b</x:String>
+                            <x:String>5.11c</x:String>
+                            <x:String>5.11d</x:String>
+                            <x:String>5.12a</x:String>
+                            <x:String>5.12b</x:String>
+                            <x:String>5.12c</x:String>
+                            <x:String>5.12d</x:String>
+                            <x:String>5.13a</x:String>
+                            <x:String>5.13b</x:String>
+                            <x:String>5.13c</x:String>
+                            <x:String>5.13d</x:String>
+                            <x:String>5.14a</x:String>
+                            <x:String>5.14b</x:String>
+                            <x:String>5.14c</x:String>
+                            <x:String>5.14d</x:String>
+                            <x:String>5.15a</x:String>
+                            <x:String>5.15b</x:String>
+                            <x:String>5.15c</x:String>
+                            <x:String>5.15d</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Frame>
+            <Frame Grid.Row="3" Grid.Column="1" x:Name="VGradeParent" IsVisible="False">
+                <Picker x:Name="VGrade" Title="Select an option"
+                        SelectedItem="{Binding Grade}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>V1</x:String>
+                            <x:String>V2</x:String>
+                            <x:String>V3</x:String>
+                            <x:String>V4</x:String>
+                            <x:String>V5</x:String>
+                            <x:String>V6</x:String>
+                            <x:String>V7</x:String>
+                            <x:String>V8</x:String>
+                            <x:String>V9</x:String>
+                            <x:String>V10</x:String>
+                            <x:String>V11</x:String>
+                            <x:String>V12</x:String>
+                            <x:String>V13</x:String>
+                            <x:String>V14</x:String>
+                            <x:String>V15</x:String>
+                            <x:String>V16</x:String>
+                            <x:String>V17</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Frame>
+
+            <Frame Grid.Row="4" Grid.Column="0">
+                <Label Text="Technique" VerticalTextAlignment="Center" />
+            </Frame>
+            <Frame Grid.Row="4" Grid.Column="1">
+                <Picker x:Name="Technique" Title="Select an option"
+                        SelectedItem="{Binding Technique}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Face</x:String>
+                            <x:String>Slab</x:String>
+                            <x:String>Crack</x:String>
+                            <x:String>Overhang</x:String>
+                            <x:String>Ceiling</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Frame>
+
+            <Frame Grid.Row="5" Grid.Column="0">
+                <Label Text="Attempts" VerticalTextAlignment="Center" />
+            </Frame>
+            <Frame Grid.Row="5" Grid.Column="1">
+                <Picker x:Name="Attempts" Title="Select an option"
+                        SelectedItem="{Binding Attempts}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Flash</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4+</x:String>
+                            <x:String>In Progress</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Frame>
+            
+            <Frame Grid.Row="6" Grid.Column="0">
+                <Label Text="Rock Type" VerticalTextAlignment="Center" />
+            </Frame>
+            <Frame Grid.Row="6" Grid.Column="1">
+                <Picker x:Name="RockType" Title="Select an option"
+                        SelectedItem="{Binding RockType}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Plastic</x:String>
+                            <x:String>Wood</x:String>
+                            <x:String>Granite</x:String>
+                            <x:String>Sandstone</x:String>
+                            <x:String>Basalt</x:String>
+                            <x:String>Quartzite</x:String>
+                            <x:String>Limestone</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Frame>
+            
+            <Frame Grid.Row="7" Grid.ColumnSpan="2">
+                <Editor x:Name="RouteDescription" AutoSize="TextChanges" FontSize="20" Placeholder="Notes" Text="{Binding Notes}"/>
+            </Frame>
+            
+            <Button Grid.Row="8" Grid.ColumnSpan="2" Text="{Binding PhotoButtonText}" 
+                    Command="{Binding TakePhotoCommand}" HeightRequest="50"/>
+            <Button Grid.Row="9" Grid.ColumnSpan="2" Text="Create Route" HeightRequest="50"
+                    Command="{Binding SaveRouteCommand}" />
+        </Grid>
+    </ScrollView>
+</ContentPage>
