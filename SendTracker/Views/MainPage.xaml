@@ -2,7 +2,7 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SendTracker.MainPage"
+             x:Class="SendTracker.Views.MainPage"
              xmlns:viewmodel="clr-namespace:SendTracker.ViewModel"
              xmlns:model="clr-namespace:SendTracker.Models"
              x:DataType="viewmodel:MainViewModel"
@@ -20,7 +20,7 @@
                                         Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, 
                                         Path=OpenRoutePageCommand}" CommandParameter="{Binding Id}"/>
                                 </Frame.GestureRecognizers>
-                                <Label Text="{Binding .}" FontAttributes="Bold"/>
+                                <Label Text="{Binding .}" FontAttributes="Bold" />
                             </Frame>
                         </Grid>
                     </DataTemplate>

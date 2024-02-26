@@ -1,7 +1,7 @@
 ﻿using SendTracker.Models;
 using SendTracker.ViewModel;
 
-namespace SendTracker;
+namespace SendTracker.Views;
 
 public partial class RoutePage : ContentPage {
     private RoutePageViewModel vm;

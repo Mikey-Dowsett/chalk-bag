@@ -3,7 +3,7 @@ using SendTracker.Data;
 using SendTracker.Models;
 using SendTracker.ViewModel;
 
-namespace SendTracker;
+namespace SendTracker.Views;
 
 public partial class MainPage : ContentPage {
     private MainViewModel vm;

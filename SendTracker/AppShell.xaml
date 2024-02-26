@@ -5,19 +5,20 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:SendTracker"
+    xmlns:views="clr-namespace:SendTracker.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="Send Tracker"
-    BackgroundColor="{StaticResource Action}">
+    BackgroundColor="{StaticResource ActionDark}">
     
     <TabBar>
         <Tab Title="Routes" Icon="mountain.png">
-            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
+            <ShellContent ContentTemplate="{DataTemplate views:MainPage}" Route="MainPage" />
         </Tab>
         <Tab Title="Friends" Icon="friends.png">
-            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+            <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
         </Tab>
         <Tab Title="Settings" Icon="setting.png">
-            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+            <ShellContent ContentTemplate="{DataTemplate views:SettingsPage}" />
         </Tab>
     </TabBar>
 

@@ -53,3 +53,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SendTracker.Views.RoutePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\RoutePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\RoutePage.xaml
+
+[C:/Users/mikey/RiderProjects/SendTracker/SendTracker/Views/SettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SendTracker.Views.SettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\SettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\SettingsPage.xaml

@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using SendTracker.Models;
 using SendTracker.Data;
+using SendTracker.Views;
 
 namespace SendTracker.ViewModel;
 

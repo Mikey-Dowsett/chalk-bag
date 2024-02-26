@@ -40,20 +40,20 @@
     <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
-      <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\appiconforeSplashScreen.scale-100.png">
+      <PackagePath>appiconforeSplashScreen.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
-      <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\appiconforeSplashScreen.scale-125.png">
+      <PackagePath>appiconforeSplashScreen.scale-125.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
-      <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\appiconforeSplashScreen.scale-150.png">
+      <PackagePath>appiconforeSplashScreen.scale-150.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
-      <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\appiconforeSplashScreen.scale-200.png">
+      <PackagePath>appiconforeSplashScreen.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
-      <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\appiconforeSplashScreen.scale-400.png">
+      <PackagePath>appiconforeSplashScreen.scale-400.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -66,144 +66,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfore.ico">
-      <PackagePath>appiconfore.ico</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLargeTile.scale-100.png">
-      <PackagePath>appiconforeLargeTile.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLargeTile.scale-125.png">
-      <PackagePath>appiconforeLargeTile.scale-125.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLargeTile.scale-150.png">
-      <PackagePath>appiconforeLargeTile.scale-150.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLargeTile.scale-200.png">
-      <PackagePath>appiconforeLargeTile.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLargeTile.scale-400.png">
-      <PackagePath>appiconforeLargeTile.scale-400.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.altform-lightunplated_targetsize-16.png">
-      <PackagePath>appiconforeLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.altform-lightunplated_targetsize-24.png">
-      <PackagePath>appiconforeLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.altform-lightunplated_targetsize-256.png">
-      <PackagePath>appiconforeLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.altform-lightunplated_targetsize-32.png">
-      <PackagePath>appiconforeLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.altform-lightunplated_targetsize-48.png">
-      <PackagePath>appiconforeLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.altform-unplated_targetsize-16.png">
-      <PackagePath>appiconforeLogo.altform-unplated_targetsize-16.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.altform-unplated_targetsize-24.png">
-      <PackagePath>appiconforeLogo.altform-unplated_targetsize-24.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.altform-unplated_targetsize-256.png">
-      <PackagePath>appiconforeLogo.altform-unplated_targetsize-256.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.altform-unplated_targetsize-32.png">
-      <PackagePath>appiconforeLogo.altform-unplated_targetsize-32.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.altform-unplated_targetsize-48.png">
-      <PackagePath>appiconforeLogo.altform-unplated_targetsize-48.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.scale-100.png">
-      <PackagePath>appiconforeLogo.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.scale-125.png">
-      <PackagePath>appiconforeLogo.scale-125.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.scale-150.png">
-      <PackagePath>appiconforeLogo.scale-150.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.scale-200.png">
-      <PackagePath>appiconforeLogo.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.scale-400.png">
-      <PackagePath>appiconforeLogo.scale-400.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.targetsize-16.png">
-      <PackagePath>appiconforeLogo.targetsize-16.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.targetsize-24.png">
-      <PackagePath>appiconforeLogo.targetsize-24.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.targetsize-256.png">
-      <PackagePath>appiconforeLogo.targetsize-256.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.targetsize-32.png">
-      <PackagePath>appiconforeLogo.targetsize-32.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeLogo.targetsize-48.png">
-      <PackagePath>appiconforeLogo.targetsize-48.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeMediumTile.scale-100.png">
-      <PackagePath>appiconforeMediumTile.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeMediumTile.scale-125.png">
-      <PackagePath>appiconforeMediumTile.scale-125.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeMediumTile.scale-150.png">
-      <PackagePath>appiconforeMediumTile.scale-150.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeMediumTile.scale-200.png">
-      <PackagePath>appiconforeMediumTile.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeMediumTile.scale-400.png">
-      <PackagePath>appiconforeMediumTile.scale-400.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeSmallTile.scale-100.png">
-      <PackagePath>appiconforeSmallTile.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeSmallTile.scale-125.png">
-      <PackagePath>appiconforeSmallTile.scale-125.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeSmallTile.scale-150.png">
-      <PackagePath>appiconforeSmallTile.scale-150.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeSmallTile.scale-200.png">
-      <PackagePath>appiconforeSmallTile.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeSmallTile.scale-400.png">
-      <PackagePath>appiconforeSmallTile.scale-400.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeStoreLogo.scale-100.png">
-      <PackagePath>appiconforeStoreLogo.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeStoreLogo.scale-125.png">
-      <PackagePath>appiconforeStoreLogo.scale-125.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeStoreLogo.scale-150.png">
-      <PackagePath>appiconforeStoreLogo.scale-150.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeStoreLogo.scale-200.png">
-      <PackagePath>appiconforeStoreLogo.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeStoreLogo.scale-400.png">
-      <PackagePath>appiconforeStoreLogo.scale-400.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeWideTile.scale-100.png">
-      <PackagePath>appiconforeWideTile.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeWideTile.scale-125.png">
-      <PackagePath>appiconforeWideTile.scale-125.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeWideTile.scale-150.png">
-      <PackagePath>appiconforeWideTile.scale-150.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeWideTile.scale-200.png">
-      <PackagePath>appiconforeWideTile.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconforeWideTile.scale-400.png">
-      <PackagePath>appiconforeWideTile.scale-400.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
