@@ -63,6 +63,22 @@
         <member name="P:SendTracker.ViewModel.RoutePageViewModel.DeleteCurrentRouteCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SendTracker.ViewModel.RoutePageViewModel.DeleteCurrentRoute"/>.</summary>
         </member>
+        <member name="T:SendTracker.ViewModel.SettingsPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:SendTracker.ViewModel.SettingsPageViewModel.TallWallGrade">
+            <inheritdoc cref="F:SendTracker.ViewModel.SettingsPageViewModel.tallWallGrade"/>
+        </member>
+        <member name="P:SendTracker.ViewModel.SettingsPageViewModel.BoulderGrade">
+            <inheritdoc cref="F:SendTracker.ViewModel.SettingsPageViewModel.boulderGrade"/>
+        </member>
+        <member name="F:SendTracker.ViewModel.SettingsPageViewModel.saveCommand">
+            <summary>The backing field for <see cref="P:SendTracker.ViewModel.SettingsPageViewModel.SaveCommand"/>.</summary>
+        </member>
+        <member name="P:SendTracker.ViewModel.SettingsPageViewModel.SaveCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SendTracker.ViewModel.SettingsPageViewModel.Save"/>.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
@@ -72,6 +88,12 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PhotoButtonText">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PhotoButtonText" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TallWallGrade">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TallWallGrade" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.BoulderGrade">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "BoulderGrade" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -80,6 +102,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PhotoButtonText">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PhotoButtonText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TallWallGrade">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TallWallGrade" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.BoulderGrade">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "BoulderGrade" generated properties.</summary>
         </member>
     </members>
 </doc>

@@ -80,7 +80,8 @@
     
     <Style TargetType="Frame">
         <Setter Property="BackgroundColor" 
-                Value="{AppThemeBinding Light={StaticResource PrimaryLight}, Dark={StaticResource PrimaryDark}}" />
+                Value="{AppThemeBinding Light={StaticResource PrimaryLight}, 
+                Dark={StaticResource PrimaryDark}}" />
     </Style>
 
     <Style TargetType="Picker">
