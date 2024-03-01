@@ -6,72 +6,73 @@
              xmlns:viewmodel="clr-namespace:SendTracker.ViewModel"
              x:DataType="viewmodel:RoutePageViewModel"
              Title="Route Page">
-    <ContentPage.Content >
-        <ScrollView Padding="25">
-            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto" 
-                  RowSpacing="0" HorizontalOptions="Fill" VerticalOptions="Start">
-                <Frame Grid.Row="0" BackgroundColor="Transparent" HasShadow="False" 
-                       HorizontalOptions="Center" IsVisible="False">
-                    <Label  x:Name="SendName" FontAttributes="Bold" FontSize="30" />
-                </Frame>
-                <Frame Grid.Row="1" BackgroundColor="Transparent" HasShadow="False">
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Climb Type: "/>
-                                <Span x:Name="ClimbType" FontAttributes="Bold"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </Frame>
-                <Frame Grid.Row="2" BackgroundColor="Transparent" HasShadow="False">
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Grade: "/>
-                                <Span x:Name="Grade" FontAttributes="Bold"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </Frame>
-                <Frame Grid.Row="3" BackgroundColor="Transparent" HasShadow="False">
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Attempts: "/>
-                                <Span x:Name="Attempts" FontAttributes="Bold"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </Frame>
-                <Frame Grid.Row="4" BackgroundColor="Transparent" HasShadow="False">
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Technique: "/>
-                                <Span x:Name="Technique" FontAttributes="Bold"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </Frame>
-                <Frame Grid.Row="5" BackgroundColor="Transparent" HasShadow="False">
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Rock Type: "/>
-                                <Span x:Name="RockType" FontAttributes="Bold"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </Frame>
-                <Frame Grid.Row="6" x:Name="NotesFrame" BackgroundColor="Transparent" HasShadow="False">
-                    <Label x:Name="Notes"/>
-                </Frame>
-                <Frame Grid.Row="7" x:Name="PhotoFrame" BackgroundColor="Transparent" HasShadow="False">
-                    <Image x:Name="Photo"/>
-                </Frame>
-                <Button Grid.Row="8" Text="Delete Route" Command="{Binding DeleteCurrentRouteCommand}" 
-                        Margin="0, 5, 0, 20"/>
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Edit" Order="Secondary"/>
+        <ToolbarItem Text="Delete" Command="{Binding DeleteCurrentRouteCommand}" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView Padding="20">
+            <Grid RowDefinitions="*, *, *, *, *, *, *, *, *"
+                  RowSpacing="10" HorizontalOptions="Fill" VerticalOptions="Start">
+                
+                <Image Grid.Row="0" x:Name="Photo" />
+                <Label Grid.Row="1" x:Name="Notes" />
+                
+                <Label Grid.Row="2" FontSize="15">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Climb Type: " FontAttributes="Bold" />
+                            <Span x:Name="ClimbType" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label Grid.Row="3" FontSize="15">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Grade: " FontAttributes="Bold" />
+                            <Span x:Name="Grade" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                
+                <Label Grid.Row="4" FontSize="15">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Attempts: " FontAttributes="Bold" />
+                            <Span x:Name="Attempts" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                
+                <Label Grid.Row="5" FontSize="15">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Technique: " FontAttributes="Bold" />
+                            <Span x:Name="Technique" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                
+                <Label Grid.Row="6" FontSize="15">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Rock Type: " FontAttributes="Bold"  />
+                            <Span x:Name="RockType"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                
+                <Label Grid.Row="7" FontSize="15">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Date: " FontAttributes="Bold" />
+                            <Span x:Name="Date" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </Grid>
         </ScrollView>
     </ContentPage.Content>

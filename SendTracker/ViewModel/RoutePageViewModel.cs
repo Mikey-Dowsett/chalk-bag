@@ -1,10 +1,7 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using SendTracker.Models;
 using SendTracker.Data;
-using SendTracker.Views;
+using SendTracker.Models;
 
 namespace SendTracker.ViewModel;
 
@@ -19,7 +16,7 @@ public partial class RoutePageViewModel : ObservableObject {
     public string Attempts { get; set; } = null;
 
     public int Id { get; set; }
-    
+
     public async Task<Route> LoadData() {
         return await LoadCurrentRoute();
     }
@@ -29,7 +26,7 @@ public partial class RoutePageViewModel : ObservableObject {
         route = await database.GetRouteAsync(Id);
         return route;
     }
-    
+
     [RelayCommand]
     public async Task DeleteCurrentRoute() {
         string action = await Shell.Current.CurrentPage.DisplayActionSheet("Delete Route", "Cancel", "Delete");

@@ -199,20 +199,29 @@
     <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\mountain.scale-100.png">
-      <PackagePath>mountain.scale-100.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\setting.scale-100.png">
       <PackagePath>setting.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\mountain.scale-100.png">
+      <PackagePath>mountain.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\friends.scale-100.png">
       <PackagePath>friends.scale-100.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\photo.scale-100.png">
+      <PackagePath>photo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\add.scale-100.png">
       <PackagePath>add.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\plus.scale-100.png">
-      <PackagePath>plus.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\pgallery.scale-100.png">
+      <PackagePath>pgallery.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\video.scale-100.png">
+      <PackagePath>video.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\vgallery.scale-100.png">
+      <PackagePath>vgallery.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SendTracker.deps.json">
       <PackagePath>SendTracker.deps.json</PackagePath>

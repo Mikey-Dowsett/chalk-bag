@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
-using SendTracker.ViewModel;
 using SendTracker.Data;
+using SendTracker.ViewModel;
 using SendTracker.Views;
 
 namespace SendTracker;
@@ -21,8 +21,8 @@ public static class MauiProgram {
         builder.Services.AddSingleton<SettingsPage>();
         builder.Services.AddSingleton<SettingsPageViewModel>();
 
-        builder.Services.AddTransient<NewRoutePage>();
-        builder.Services.AddTransient<NewRouteViewModel>();
+        builder.Services.AddSingleton<NewRoutePage>();
+        builder.Services.AddSingleton<NewRouteViewModel>();
 
         builder.Services.AddTransient<RoutePage>();
         builder.Services.AddTransient<RoutePageViewModel>();

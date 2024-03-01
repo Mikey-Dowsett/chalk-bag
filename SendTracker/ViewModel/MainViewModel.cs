@@ -1,8 +1,8 @@
 ﻿using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using SendTracker.Models;
 using SendTracker.Data;
+using SendTracker.Models;
 using SendTracker.Views;
 
 namespace SendTracker.ViewModel;
@@ -28,7 +28,6 @@ public partial class MainViewModel : ObservableObject {
             Routes.Add(route);
             Console.WriteLine(route.ToString());
         }
-        
     }
 
     [RelayCommand]

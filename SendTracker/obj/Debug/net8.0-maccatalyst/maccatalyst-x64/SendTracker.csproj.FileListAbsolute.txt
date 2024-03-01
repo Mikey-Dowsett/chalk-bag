@@ -291,7 +291,6 @@ C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalys
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\SendTracker.dll
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\mountain.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\setting.png
-C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\plus.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\friends.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\add.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\SendTracker.sourcelink.json
@@ -307,3 +306,7 @@ C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalys
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\photo.png
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\pgallery.png
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\video.png
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\vgallery.png

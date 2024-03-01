@@ -19,6 +19,10 @@
     <intent>
       <action android:name="android.media.action.IMAGE_CAPTURE" />
     </intent>
+    <intent>
+      <action android:name="android.intent.action.VIEW" />
+      <data android:scheme="geo" />
+    </intent>
   </queries>
   <permission android:name="com.companyname.sendtracker.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
   <uses-permission android:name="com.companyname.sendtracker.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
