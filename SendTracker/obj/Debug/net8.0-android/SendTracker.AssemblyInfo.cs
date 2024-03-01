@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SendTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+ecad23ea2e5e4eb04305d555896f014b059ef0bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+25d140c5150077472780ecc1b646a80d75affb9b")]
 [assembly: System.Reflection.AssemblyProductAttribute("SendTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SendTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
