@@ -6,12 +6,12 @@
              xmlns:viewmodel="clr-namespace:SendTracker.ViewModel"
              x:DataType="viewmodel:SettingsPageViewModel"
              Title="Settings">
-    
+
     <ContentPage.Content>
-        <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" HorizontalOptions="Fill" VerticalOptions="Start" 
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" HorizontalOptions="Fill" VerticalOptions="Start"
               Padding="25" RowSpacing="25">
             <Frame Grid.Row="0">
-                <Label Text="Tall Wall Grading Style" FontAttributes="Bold"/>
+                <Label Text="Tall Wall Grading Style" FontAttributes="Bold" />
             </Frame>
             <Frame Grid.Row="1" Margin="0, -25, 0, 0">
                 <Picker x:Name="TallWallGrade" SelectedIndex="{Binding TallWallGrade}">
@@ -24,9 +24,9 @@
                     </Picker.ItemsSource>
                 </Picker>
             </Frame>
-            
+
             <Frame Grid.Row="2">
-                <Label Text="Boulder Grading Style" FontAttributes="Bold"/>
+                <Label Text="Boulder Grading Style" FontAttributes="Bold" />
             </Frame>
             <Frame Grid.Row="3" Margin="0, -25, 0, 0">
                 <Picker x:Name="BoulderGrade" SelectedIndex="{Binding BoulderGrade}">
@@ -38,7 +38,7 @@
                     </Picker.ItemsSource>
                 </Picker>
             </Frame>
-            <Button Grid.Row="4" Text="Save" Command="{Binding SaveCommand}"/>
+            <Button Grid.Row="4" Text="Save" Command="{Binding SaveCommand}" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

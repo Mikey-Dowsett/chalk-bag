@@ -1,12 +1,10 @@
-﻿using System.Collections.ObjectModel;
-using SendTracker.Data;
-using SendTracker.Models;
-using SendTracker.ViewModel;
+﻿using SendTracker.ViewModel;
 
 namespace SendTracker.Views;
 
 public partial class MainPage : ContentPage {
-    private MainViewModel vm;
+    private readonly MainViewModel vm;
+
     public MainPage(MainViewModel _vm) {
         InitializeComponent();
         BindingContext = _vm;

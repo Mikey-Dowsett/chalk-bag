@@ -1,5 +1,5 @@
-﻿using SQLite;
-using SendTracker.Models;
+﻿using SendTracker.Models;
+using SQLite;
 
 namespace SendTracker.Data;
 
@@ -16,7 +16,7 @@ public class RoutesDatabase {
 
     public async Task<List<Route>> GetRoutesAsync() {
         await Init();
-        return await Database.Table<Route>().ToListAsync();
+        return await Database.Table<Route>().OrderByDescending(route => route.Id).ToListAsync();
     }
 
     public async Task<Route> GetRouteAsync(int id) {

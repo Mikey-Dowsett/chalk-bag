@@ -4,32 +4,31 @@ using SendTracker.ViewModel;
 namespace SendTracker.Views;
 
 public partial class RoutePage : ContentPage {
-    private RoutePageViewModel vm;
+    private readonly RoutePageViewModel vm;
+
     public RoutePage(RoutePageViewModel vm) {
         InitializeComponent();
         BindingContext = vm;
         this.vm = vm;
     }
-    
+
     protected override async void OnAppearing() {
         Route route = await vm.LoadData();
         Title = route.SendName;
-        SendName.Text = $"{route.SendName}";
         ClimbType.Text = $"{route.ClimbType}";
         Grade.Text = $"{route.Grade}";
         Attempts.Text = $"{route.Attempts}";
         Technique.Text = $"{route.Technique}";
         RockType.Text = $"{route.RockType}";
+        Date.Text = $"{route.Date}";
 
-        if (route.Notes == null) {
-            NotesFrame.IsVisible = false;
-        }
-        else {
+        if (route.Notes == null)
+            Notes.IsVisible = false;
+        else
             Notes.Text = $"{route.Notes}";
-        }
-        
+
         if (route.PhotoPath == null) {
-            PhotoFrame.IsVisible = false;
+            Photo.IsVisible = false;
         }
         else {
             Photo.Source = new FileImageSource();

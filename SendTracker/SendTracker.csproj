@@ -40,11 +40,11 @@
 
     <ItemGroup>
         <!-- App Icon -->
-        <MauiIcon Include="Resources\AppIcon\appicon.svg"  ForegroundFile="Resources/AppIcon/appiconfore.svg"/>
+        <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources/AppIcon/appiconfore.svg"/>
 
         <!-- Splash Screen -->
         <MauiSplashScreen Include="Resources/AppIcon/appiconfore.svg"/>
-        
+
         <!-- Images -->
         <MauiImage Include="Resources\Images\*"/>
 
@@ -66,22 +66,22 @@
 
     <ItemGroup>
         <Compile Update="Views\NewRoutePage.xaml.cs">
-          <DependentUpon>NewRoutePage.xaml</DependentUpon>
-          <SubType>Code</SubType>
+            <DependentUpon>NewRoutePage.xaml</DependentUpon>
+            <SubType>Code</SubType>
         </Compile>
         <Compile Update="Views\MainPage.xaml.cs">
-          <DependentUpon>MainPage.xaml</DependentUpon>
-          <SubType>Code</SubType>
+            <DependentUpon>MainPage.xaml</DependentUpon>
+            <SubType>Code</SubType>
         </Compile>
     </ItemGroup>
 
     <ItemGroup>
-      <MauiXaml Update="Views\NewRoutePage.xaml">
-        <SubType>Designer</SubType>
-      </MauiXaml>
-      <MauiXaml Update="Views\MainPage.xaml">
-        <SubType>Designer</SubType>
-      </MauiXaml>
+        <MauiXaml Update="Views\NewRoutePage.xaml">
+            <SubType>Designer</SubType>
+        </MauiXaml>
+        <MauiXaml Update="Views\MainPage.xaml">
+            <SubType>Designer</SubType>
+        </MauiXaml>
     </ItemGroup>
 
 </Project>

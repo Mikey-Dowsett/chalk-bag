@@ -4,9 +4,9 @@ using CommunityToolkit.Mvvm.Input;
 namespace SendTracker.ViewModel;
 
 public partial class SettingsPageViewModel : ObservableObject {
-    [ObservableProperty] private int tallWallGrade;
     [ObservableProperty] private int boulderGrade;
-    
+    [ObservableProperty] private int tallWallGrade;
+
     [RelayCommand]
     private async Task Save() {
         Preferences.Default.Set("tall_wall_grade", tallWallGrade);

@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.Runtime.InteropServices.JavaScript;
 using SQLite;
 
 namespace SendTracker.Models;
@@ -6,7 +6,8 @@ namespace SendTracker.Models;
 public class Route {
     public Route() { }
 
-    public Route(string sendName, string climbType, string grade, string technique, string attempts, string notes, string rockType, string photoPath) {
+    public Route(string sendName, string climbType, string grade, string technique, string attempts, string notes,
+        string rockType, string photoPath, DateTime date) {
         SendName = sendName;
         ClimbType = climbType;
         Grade = grade;
@@ -15,6 +16,7 @@ public class Route {
         Notes = notes;
         RockType = rockType;
         PhotoPath = photoPath;
+        Date = date;
     }
 
     [PrimaryKey] [AutoIncrement] public int Id { get; set; }
@@ -26,6 +28,9 @@ public class Route {
     public string Notes { get; set; }
     public string RockType { get; set; }
     public string PhotoPath { get; set; }
+    public DateTime Date { get; set; }
+    public TimeSpan duration { get; set; }
+    public int pitches { get; set; }
 
     public override string ToString() {
         return $"{SendName}, {ClimbType}, {Grade}";

@@ -3,18 +3,32 @@
 namespace SendTracker.Views;
 
 public partial class NewRoutePage {
+    private NewRouteViewModel vm;
     public NewRoutePage(NewRouteViewModel vm) {
         InitializeComponent();
         BindingContext = vm;
-        
+        this.vm = vm;
+
         ClimbType.SelectedIndexChanged += (sender, args) => SelectGrade();
-        
-        RouteName.Text = null;
-        RouteDescription.Text = null;
-        ClimbType.SelectedIndex = 0;
-        Technique.SelectedIndex = 0;
-        Attempts.SelectedIndex = 0;
-        RockType.SelectedIndex = 0;
+
+        LoadDefaults();
+    }
+
+    protected override async void OnAppearing() {
+        LoadDefaults();
+    }
+
+    private void LoadDefaults() {
+            RouteName.Text = null;
+            RouteDescription.Text = null;
+            ClimbType.SelectedIndex = 3;
+            Technique.SelectedIndex = 0;
+            Attempts.SelectedIndex = 0;
+            RockType.SelectedIndex = 0;
+            vm.PhotoPath = null;
+            vm.OptionsVisible = false;
+            vm.MediaVisible = false;
+            SelectGrade();
     }
 
     private void SelectGrade() {
@@ -23,10 +37,9 @@ public partial class NewRoutePage {
         UIAAParent.IsVisible = false;
         VGradeParent.IsVisible = false;
         FontParent.IsVisible = false;
-        
-        if (ClimbType.SelectedItem.Equals("Boulder")) {
-            switch(Preferences.Default.Get("boulder_grade", 0))
-            {
+
+        if (ClimbType.SelectedItem.Equals("Boulder") || ClimbType.SelectedItem.Equals("Highball"))
+            switch (Preferences.Default.Get("boulder_grade", 0)) {
                 case 0:
                     VGradeParent.IsVisible = true;
                     VGrade.SelectedIndex = 4;
@@ -36,10 +49,8 @@ public partial class NewRoutePage {
                     Font.SelectedIndex = 7;
                     break;
             }
-        }
-        else {
-            switch(Preferences.Default.Get("tall_wall_grade", 0))
-            {
+        else
+            switch (Preferences.Default.Get("tall_wall_grade", 0)) {
                 case 0:
                     YDSParent.IsVisible = true;
                     YDS.SelectedIndex = 6;
@@ -53,6 +64,5 @@ public partial class NewRoutePage {
                     UIAA.SelectedIndex = 9;
                     break;
             }
-        }
     }
 }

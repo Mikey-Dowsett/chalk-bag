@@ -295,7 +295,6 @@ C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossim
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\ref\SendTracker.dll
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\mountain.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\setting.png
-C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\plus.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\friends.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\add.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\SendTracker.sourcelink.json
@@ -318,3 +317,10 @@ C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossim
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\appiconfore_329A5EB8582C93F324FD61B8A86D0AAF1A02612005333AE351A2D0D956FE4885.png
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\appiconfore_329A5EB8582C93F324FD61B8A86D0AAF1A02612005333AE351A2D0D956FE4885@2x.png
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\appiconfore_329A5EB8582C93F324FD61B8A86D0AAF1A02612005333AE351A2D0D956FE4885@3x.png
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\vgallery.png
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\photo.png
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\video.png
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\pgallery.png
