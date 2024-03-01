@@ -1042,8 +1042,11 @@ C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\an
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\android\marshal_methods.x86.o
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\android\jni_remap.x86.o
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\app_shared_libraries\x86\libxamarin-app.so
+<<<<<<< HEAD
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\resizetizer\r\drawable\vgallery.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\resizetizer\r\drawable\pgallery.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\resizetizer\r\drawable\video.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\resizetizer\r\drawable\photo.png
+=======
+>>>>>>> main
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\android\assets\System.Private.CoreLib.dll
