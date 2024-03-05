@@ -7,6 +7,10 @@
              xmlns:model="clr-namespace:SendTracker.Models"
              x:DataType="viewmodel:MainViewModel"
              Title="Send Tracker">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="add.png" Command="{Binding OpenNewRouteCommand}" />
+    </ContentPage.ToolbarItems>
 
     <ContentView HorizontalOptions="Fill">
         <Grid>

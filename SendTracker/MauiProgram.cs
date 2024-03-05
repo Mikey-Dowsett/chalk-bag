@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 using SendTracker.Data;
 using SendTracker.ViewModel;
 using SendTracker.Views;
@@ -10,6 +11,7 @@ public static class MauiProgram {
         MauiAppBuilder builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
+            .UseMauiCommunityToolkit()
             .ConfigureFonts(fonts => {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
@@ -21,8 +23,8 @@ public static class MauiProgram {
         builder.Services.AddSingleton<SettingsPage>();
         builder.Services.AddSingleton<SettingsPageViewModel>();
 
-        builder.Services.AddSingleton<NewRoutePage>();
-        builder.Services.AddSingleton<NewRouteViewModel>();
+        builder.Services.AddTransient<NewRoutePage>();
+        builder.Services.AddTransient<NewRouteViewModel>();
 
         builder.Services.AddTransient<RoutePage>();
         builder.Services.AddTransient<RoutePageViewModel>();

@@ -16,9 +16,6 @@
         <!-- <Tab Title="Friends" Icon="friends.png"> -->
         <!--     <ShellContent ContentTemplate="{DataTemplate views:MainPage}" /> -->
         <!-- </Tab> -->
-        <Tab Title="New Route" Icon="add.png">
-            <ShellContent ContentTemplate="{DataTemplate views:NewRoutePage}" />
-        </Tab>
         <Tab Title="Settings" Icon="setting.png">
             <ShellContent ContentTemplate="{DataTemplate views:SettingsPage}" />
         </Tab>

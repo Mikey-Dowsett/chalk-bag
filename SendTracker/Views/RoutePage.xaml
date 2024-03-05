@@ -14,7 +14,7 @@
     
     <ContentPage.Content>
         <ScrollView Padding="20">
-            <Grid RowDefinitions="*, *, *, *, *, *, *, *, *"
+            <Grid RowDefinitions="*, *, *, *, *, *, *, *, *, *, *"
                   RowSpacing="10" HorizontalOptions="Fill" VerticalOptions="Start">
                 
                 <Image Grid.Row="0" x:Name="Photo" />
@@ -66,6 +66,24 @@
                 </Label>
                 
                 <Label Grid.Row="7" FontSize="15">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Duration: " FontAttributes="Bold"  />
+                            <Span x:Name="Duration"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                
+                <Label Grid.Row="8" FontSize="15">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Pitches: " FontAttributes="Bold"  />
+                            <Span x:Name="Pitches"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                
+                <Label Grid.Row="9" FontSize="15">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="Date: " FontAttributes="Bold" />
