@@ -21,6 +21,8 @@ public partial class RoutePage : ContentPage {
         Technique.Text = $"{route.Technique}";
         RockType.Text = $"{route.RockType}";
         Date.Text = $"{route.Date}";
+        Duration.Text = $"{route.Duration}";
+        Pitches.Text = $"{route.Pitches}";
 
         if (route.Notes == null)
             Notes.IsVisible = false;

@@ -2,10 +2,12 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="SendTracker.Views.NewRoutePage"
              xmlns:viewmodel="clr-namespace:SendTracker.ViewModel"
              x:DataType="viewmodel:NewRouteViewModel"
-             Title="New Route">
+             Title="New Route"
+             Shell.TabBarIsVisible="False">
 
     <ScrollView HorizontalOptions="Fill" VerticalOptions="Start">
         <Grid RowDefinitions="*, *, *, *, *, *, *, *, *, *, *" ColumnDefinitions="*, *" RowSpacing="10">
@@ -25,7 +27,7 @@
                     </Frame.GestureRecognizers>
                     <Label Text="Route Information"></Label>
                 </Frame>
-                <Grid RowDefinitions="80, 80, 80, 80, 80" ColumnDefinitions=".5*, .5*" x:Name="Options" 
+                <Grid RowDefinitions="80, 80, 80, 80, 80, 80, 80" ColumnDefinitions=".5*, .5*" x:Name="Options" 
                       IsVisible="{Binding OptionsVisible}" Padding="10, 0, 10, 0">
                     <Frame Grid.Row="0" Grid.Column="0">
                         <Label Text="Climb Type" VerticalTextAlignment="Center" FontSize="15" />
@@ -283,6 +285,32 @@
                                 </x:Array>
                             </Picker.ItemsSource>
                         </Picker>
+                    </Frame>
+                    
+                    <Frame Grid.Row="5" Grid.Column="0">
+                        <Label Text="Duration" VerticalTextAlignment="Center" FontSize="15" />
+                    </Frame>
+                    <Frame Grid.Row="5" Grid.Column="5">
+                        <Entry Placeholder="00:00:00" FontSize="15" MaxLength="8" Keyboard="{x:Static Keyboard.Numeric}" 
+                                x:Name="TimeInput" TextChanged="TimeInput_OnTextChanged" Text="{Binding Duration}">
+                            <Entry.Behaviors>
+                                <toolkit:MaskedBehavior Mask="XX:XX:XX"/>
+                            </Entry.Behaviors>
+                        </Entry>
+                    </Frame>
+                    
+                    <Frame Grid.Row="6" Grid.Column="0">
+                        <Label VerticalTextAlignment="Center" FontSize="15">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Pitches: " />
+                                    <Span Text="{Binding Pitches}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Frame>
+                    <Frame Grid.Row="6" Grid.Column="1">
+                        <Stepper Minimum="1" Value="{Binding Pitches}" />
                     </Frame>
                 </Grid>
             </StackLayout>

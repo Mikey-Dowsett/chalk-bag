@@ -17,6 +17,7 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
     public string Notes { get; set; }
     public string RockType { get; set; }
     public string PhotoPath { get; set; }
+    public string Duration { get; set; }
     
     public event PropertyChangedEventHandler PropertyChanged;
     public ICommand OptionsCommand => new Command(ShowOptions);
@@ -39,6 +40,16 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
             if (mediaVisible == value) return;
             mediaVisible = value;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(MediaVisible)));
+        }
+    }
+
+    private int pitches = 1;
+    public int Pitches {
+        get => pitches;
+        set {
+            if (pitches == value) return;
+            pitches = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Pitches)));
         }
     }
 
@@ -79,13 +90,26 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
     
     [RelayCommand]
     public async Task SaveRoute() {
-        RoutesDatabase database = new();
-        Route route = new(SendName, ClimbType, Grade, Technique, Attempts, Notes, RockType, PhotoPath,
-            DateTime.Now);
-        await database.SaveRouteAsync(route);
-        if (route.SendName == null || route.SendName == string.Empty) {
-            route.SendName = $"Climb {route.Id}";
+        bool result = true;
+        string errorMessage = SendName == null ? "Missing Name!\n" : "";
+        errorMessage += Notes == null ? "Missing Notes!\n" : "";
+        errorMessage += PhotoPath == null ? "Missing Media!\n" : "";
+        if (SendName == null || Notes == null || PhotoPath == null) {
+            result = await Shell.Current.DisplayAlert("Continue?",
+                errorMessage, "Yes", "No");
+        }
+
+        if (result == true) {
+            RoutesDatabase database = new();
+            Route route = new(SendName, ClimbType, Grade, Technique, Attempts, Notes, RockType, PhotoPath,
+                DateTime.Now, Duration, Pitches);
             await database.SaveRouteAsync(route);
+            if (route.SendName == null || route.SendName == string.Empty) {
+                route.SendName = $"Climb {route.Id}";
+                await database.SaveRouteAsync(route);
+            }
+            
+            await Shell.Current.GoToAsync("..");
         }
     }
 }

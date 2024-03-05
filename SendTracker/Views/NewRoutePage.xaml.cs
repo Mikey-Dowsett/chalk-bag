@@ -10,25 +10,19 @@ public partial class NewRoutePage {
         this.vm = vm;
 
         ClimbType.SelectedIndexChanged += (sender, args) => SelectGrade();
-
-        LoadDefaults();
     }
 
     protected override async void OnAppearing() {
-        LoadDefaults();
-    }
-
-    private void LoadDefaults() {
-            RouteName.Text = null;
-            RouteDescription.Text = null;
-            ClimbType.SelectedIndex = 3;
-            Technique.SelectedIndex = 0;
-            Attempts.SelectedIndex = 0;
-            RockType.SelectedIndex = 0;
-            vm.PhotoPath = null;
-            vm.OptionsVisible = false;
-            vm.MediaVisible = false;
-            SelectGrade();
+        RouteName.Text = null;
+        RouteDescription.Text = null;
+        ClimbType.SelectedIndex = 3;
+        Technique.SelectedIndex = 0;
+        Attempts.SelectedIndex = 0;
+        RockType.SelectedIndex = 0;
+        vm.PhotoPath = null;
+        vm.OptionsVisible = false;
+        vm.MediaVisible = false;
+        SelectGrade();
     }
 
     private void SelectGrade() {
@@ -64,5 +58,9 @@ public partial class NewRoutePage {
                     UIAA.SelectedIndex = 9;
                     break;
             }
+    }
+
+    private void TimeInput_OnTextChanged(object? sender, TextChangedEventArgs e) {
+        if (TimeInput.Text.Length == 4 || TimeInput.Text.Length == 7) TimeInput.CursorPosition++;
     }
 }

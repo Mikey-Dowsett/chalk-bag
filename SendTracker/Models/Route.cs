@@ -7,7 +7,7 @@ public class Route {
     public Route() { }
 
     public Route(string sendName, string climbType, string grade, string technique, string attempts, string notes,
-        string rockType, string photoPath, DateTime date) {
+        string rockType, string photoPath, DateTime date, string duration, int pitches) {
         SendName = sendName;
         ClimbType = climbType;
         Grade = grade;
@@ -17,6 +17,8 @@ public class Route {
         RockType = rockType;
         PhotoPath = photoPath;
         Date = date;
+        Duration = duration;
+        Pitches = pitches;
     }
 
     [PrimaryKey] [AutoIncrement] public int Id { get; set; }
@@ -29,8 +31,8 @@ public class Route {
     public string RockType { get; set; }
     public string PhotoPath { get; set; }
     public DateTime Date { get; set; }
-    public TimeSpan duration { get; set; }
-    public int pitches { get; set; }
+    public string Duration { get; set; }
+    public int Pitches { get; set; }
 
     public override string ToString() {
         return $"{SendName}, {ClimbType}, {Grade}";

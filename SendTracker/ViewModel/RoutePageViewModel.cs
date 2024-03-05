@@ -14,6 +14,8 @@ public partial class RoutePageViewModel : ObservableObject {
     public string Grade { get; set; } = null;
     public string Technique { get; set; } = null;
     public string Attempts { get; set; } = null;
+    public string Duration { get; set; } = null;
+    public int Pitches { get; set; } = 1;
 
     public int Id { get; set; }
 
