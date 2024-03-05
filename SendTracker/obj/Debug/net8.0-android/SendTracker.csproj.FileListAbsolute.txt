@@ -28,7 +28,6 @@ C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\re
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\resizetizer\r\drawable\add.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\resizetizer\r\drawable\friends.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\resizetizer\r\drawable\mountain.png
-C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\resizetizer\r\drawable\pgallery.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\resizetizer\r\drawable\photo.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\resizetizer\r\drawable\setting.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\resizetizer\r\drawable\vgallery.png
@@ -1054,3 +1053,4 @@ C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\st
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\android\assets\System.Private.CoreLib.dll
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-android\resizetizer\r\drawable\gallery.png

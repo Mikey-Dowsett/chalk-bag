@@ -8,7 +8,7 @@
              Title="Route Page">
     
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Edit" Order="Secondary"/>
+        <ToolbarItem Text="Edit" Order="Secondary" Command="{Binding EditCurrentRouteCommand}"/>
         <ToolbarItem Text="Delete" Command="{Binding DeleteCurrentRouteCommand}" Order="Secondary"/>
     </ContentPage.ToolbarItems>
     

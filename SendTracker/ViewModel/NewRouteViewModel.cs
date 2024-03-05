@@ -8,18 +8,38 @@ using SendTracker.Views;
 
 namespace SendTracker.ViewModel;
 
+[QueryProperty(nameof(RouteId), "Id")]
 public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChanged {
-    public string SendName { get; set; }
-    public string ClimbType { get; set; }
-    public string Grade { get; set; }
-    public string Technique { get; set; }
-    public string Attempts { get; set; }
-    public string Notes { get; set; }
-    public string RockType { get; set; }
-    public string PhotoPath { get; set; }
-    public string Duration { get; set; }
-    
     public event PropertyChangedEventHandler PropertyChanged;
+    public int RouteId { get; set; }
+    
+    public string? SendName { get; set; }
+    public string? ClimbType { get; set; }
+    public string? Grade { get; set; }
+    public string? Technique { get; set; }
+    public string? Attempts { get; set; }
+    public string? Notes { get; set; }
+    public string? RockType { get; set; }
+    public string? PhotoPath { get; set; }
+
+    private string duration;
+    public string? Duration {
+        get => duration;
+        set {
+            duration = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Duration)));
+        } 
+    }
+
+    private bool proposed;
+    public bool Proposed {
+        get => proposed;
+        set {
+            proposed = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Proposed)));
+        } 
+    }
+    
     public ICommand OptionsCommand => new Command(ShowOptions);
     
     private bool optionsVisible = false;
@@ -32,14 +52,14 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
         }
     }
 
-    private bool mediaVisible = false;
+    private string mediaText = "Add Media";
 
-    public bool MediaVisible {
-        get => mediaVisible;
+    public string MediaText {
+        get => mediaText;
         set {
-            if (mediaVisible == value) return;
-            mediaVisible = value;
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(MediaVisible)));
+            if (mediaText == value) return;
+            mediaText = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(MediaText)));
         }
     }
 
@@ -84,7 +104,7 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
                 await sourceStream.CopyToAsync(localFileStream);
             }
 
-            MediaVisible = PhotoPath != null;
+            MediaText = PhotoPath == null ? "Add Media" : "Media Added";
         }
     }
     
@@ -101,14 +121,31 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
 
         if (result == true) {
             RoutesDatabase database = new();
-            Route route = new(SendName, ClimbType, Grade, Technique, Attempts, Notes, RockType, PhotoPath,
-                DateTime.Now, Duration, Pitches);
+            if (Proposed) Grade += "*";
+            Route route = null;
+            if (RouteId == 0) {
+                route = new(SendName, ClimbType, Grade, Technique, Attempts, Notes, RockType, PhotoPath,
+                    DateTime.Now, Duration, Pitches, Proposed);
+            }
+            else {
+                route = await database.GetRouteAsync(RouteId);
+                route.SendName = SendName;
+                route.ClimbType = ClimbType;
+                route.Grade = Grade;
+                route.Technique = Technique;
+                route.Attempts = Attempts;
+                route.Notes = Notes;
+                route.RockType = RockType;
+                route.PhotoPath = PhotoPath;
+                route.Duration = Duration;
+                route.Pitches = Pitches;
+                route.Proposed = Proposed;
+            }
             await database.SaveRouteAsync(route);
             if (route.SendName == null || route.SendName == string.Empty) {
                 route.SendName = $"Climb {route.Id}";
                 await database.SaveRouteAsync(route);
             }
-            
             await Shell.Current.GoToAsync("..");
         }
     }

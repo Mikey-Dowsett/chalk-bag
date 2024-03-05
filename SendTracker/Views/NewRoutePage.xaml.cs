@@ -1,4 +1,6 @@
 ﻿using SendTracker.ViewModel;
+using SendTracker.Data;
+using SendTracker.Models;
 
 namespace SendTracker.Views;
 
@@ -47,16 +49,43 @@ public partial class NewRoutePage {
     }
 
     protected override async void OnAppearing() {
-        RouteName.Text = null;
-        RouteDescription.Text = null;
-        ClimbType.SelectedIndex = 3;
-        Technique.SelectedIndex = 0;
-        Attempts.SelectedIndex = 0;
-        RockType.SelectedIndex = 0;
-        vm.PhotoPath = null;
+        if (vm.RouteId == 0) {
+            RouteName.Text = null;
+            RouteDescription.Text = null;
+            ClimbType.SelectedIndex = 3;
+            Technique.SelectedIndex = 0;
+            Attempts.SelectedIndex = 0;
+            RockType.SelectedIndex = 0;
+            vm.PhotoPath = null;
+            vm.OptionsVisible = false;
+            SelectGrade();
+        }
+        else {
+            LoadRoute();
+        }
+    }
+
+    private async Task LoadRoute() {
+        Title = "Edit Route";
+        RoutesDatabase database = new();
+        Route route = await database.GetRouteAsync(vm.RouteId);
+        RouteName.Text = route.SendName;
+        RouteDescription.Text = route.Notes;
+        ClimbType.SelectedItem = route.ClimbType;
+        Technique.SelectedItem = route.Technique;
+        Attempts.SelectedItem = route.Attempts;
+        RockType.SelectedItem = route.RockType;
+        
+        vm.Proposed = route.Proposed;
+        vm.Pitches = route.Pitches;
+        vm.Duration = route.Duration;
+        vm.PhotoPath = route.PhotoPath;
+        if (vm.PhotoPath != null) vm.MediaText = "Media Added";
         vm.OptionsVisible = false;
-        vm.MediaVisible = false;
+        
         SelectGrade();
+        if (BoulderParent.IsVisible) BoulderGrades.SelectedItem = vm.Proposed ? route.Grade.Trim('*') : route.Grade;
+        else if (TallWallParent.IsVisible) TallWallGrades.SelectedItem = vm.Proposed ? route.Grade.Trim('*') : route.Grade;
     }
 
     private void SelectGrade() {
