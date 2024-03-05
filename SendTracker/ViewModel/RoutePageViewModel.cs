@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using SendTracker.Data;
 using SendTracker.Models;
+using SendTracker.Views;
 
 namespace SendTracker.ViewModel;
 
@@ -37,5 +38,10 @@ public partial class RoutePageViewModel : ObservableObject {
             await database.DeleteRouteAsync(route);
             await Shell.Current.GoToAsync("..");
         }
+    }
+
+    [RelayCommand]
+    public async Task EditCurrentRoute() {
+        await Shell.Current.GoToAsync($"{nameof(NewRoutePage)}?Id={Id}");
     }
 }

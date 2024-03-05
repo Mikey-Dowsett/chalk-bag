@@ -205,11 +205,11 @@
     <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\friends.scale-100.png">
       <PackagePath>friends.scale-100.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\gallery.scale-100.png">
+      <PackagePath>gallery.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\mountain.scale-100.png">
       <PackagePath>mountain.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\pgallery.scale-100.png">
-      <PackagePath>pgallery.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\photo.scale-100.png">
       <PackagePath>photo.scale-100.png</PackagePath>

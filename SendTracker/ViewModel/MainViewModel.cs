@@ -16,7 +16,7 @@ public partial class MainViewModel : ObservableObject {
 
     [RelayCommand]
     private async Task OpenNewRoute() {
-        await Shell.Current.GoToAsync(nameof(NewRoutePage));
+        await Shell.Current.GoToAsync($"{nameof(NewRoutePage)}?Id={0}");
     }
 
     [RelayCommand]

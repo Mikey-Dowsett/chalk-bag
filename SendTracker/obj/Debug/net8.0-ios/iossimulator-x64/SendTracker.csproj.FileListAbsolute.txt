@@ -292,7 +292,6 @@ C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossim
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\friends.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\add.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\setting.png
-C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\pgallery.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\vgallery.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\photo.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\mauiimage.stamp
@@ -323,3 +322,4 @@ C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossim
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\SendTracker.pdb
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\SendTracker.genruntimeconfig.cache
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\ref\SendTracker.dll
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\gallery.png

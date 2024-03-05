@@ -52,12 +52,19 @@
         </member>
         <member name="T:SendTracker.ViewModel.RoutePageViewModel">
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="F:SendTracker.ViewModel.RoutePageViewModel.deleteCurrentRouteCommand">
             <summary>The backing field for <see cref="P:SendTracker.ViewModel.RoutePageViewModel.DeleteCurrentRouteCommand"/>.</summary>
         </member>
         <member name="P:SendTracker.ViewModel.RoutePageViewModel.DeleteCurrentRouteCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SendTracker.ViewModel.RoutePageViewModel.DeleteCurrentRoute"/>.</summary>
+        </member>
+        <member name="F:SendTracker.ViewModel.RoutePageViewModel.editCurrentRouteCommand">
+            <summary>The backing field for <see cref="P:SendTracker.ViewModel.RoutePageViewModel.EditCurrentRouteCommand"/>.</summary>
+        </member>
+        <member name="P:SendTracker.ViewModel.RoutePageViewModel.EditCurrentRouteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SendTracker.ViewModel.RoutePageViewModel.EditCurrentRoute"/>.</summary>
         </member>
         <member name="T:SendTracker.ViewModel.SettingsPageViewModel">
             <inheritdoc/>
