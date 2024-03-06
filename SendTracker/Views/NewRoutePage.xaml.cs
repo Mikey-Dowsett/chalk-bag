@@ -53,9 +53,6 @@ public partial class NewRoutePage {
             RouteName.Text = null;
             RouteDescription.Text = null;
             ClimbType.SelectedIndex = 3;
-            Technique.SelectedIndex = 0;
-            Attempts.SelectedIndex = 0;
-            RockType.SelectedIndex = 0;
             vm.PhotoPath = null;
             vm.OptionsVisible = false;
             SelectGrade();
@@ -79,6 +76,8 @@ public partial class NewRoutePage {
         vm.Proposed = route.Proposed;
         vm.Pitches = route.Pitches;
         vm.Duration = route.Duration;
+        vm.Falls = route.Falls;
+        vm.Rests = route.Rests;
         vm.PhotoPath = route.PhotoPath;
         if (vm.PhotoPath != null) vm.MediaText = "Media Added";
         vm.OptionsVisible = false;

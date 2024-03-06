@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SendTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+092084d73818a59ab07487be22dcf648224842f2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+fc007dd3450f1574b8548f20ccbbe6f93d3c8321")]
 [assembly: System.Reflection.AssemblyProductAttribute("SendTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SendTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

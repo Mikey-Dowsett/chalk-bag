@@ -27,7 +27,7 @@
                     </Frame.GestureRecognizers>
                     <Label Text="Route Information"></Label>
                 </Frame>
-                <Grid RowDefinitions="80, 80, 80, 80, 80, 80, 80, 80" ColumnDefinitions=".5*, .5*" x:Name="Options" 
+                <Grid RowDefinitions="80, 80, 80, 80, 80, 80, 80, 80, 80, 80" ColumnDefinitions=".5*, .5*" x:Name="Options" 
                       IsVisible="{Binding OptionsVisible}" Padding="10, 0, 10, 0">
                     <Frame Grid.Row="0" Grid.Column="0">
                         <Label Text="Climb Type" VerticalTextAlignment="Center" FontSize="15" />
@@ -153,7 +153,35 @@
                         </Label>
                     </Frame>
                     <Frame Grid.Row="7" Grid.Column="1">
-                        <Stepper Minimum="1" Value="{Binding Pitches}" />
+                        <Stepper Minimum="0" Value="{Binding Pitches}" />
+                    </Frame>
+                    
+                    <Frame Grid.Row="8" Grid.Column="0">
+                        <Label VerticalTextAlignment="Center" FontSize="15">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Falls: " />
+                                    <Span Text="{Binding Falls}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Frame>
+                    <Frame Grid.Row="8" Grid.Column="1">
+                        <Stepper Minimum="0" Value="{Binding Falls}" />
+                    </Frame>
+                    
+                    <Frame Grid.Row="9" Grid.Column="0">
+                        <Label VerticalTextAlignment="Center" FontSize="15">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Rests: " />
+                                    <Span Text="{Binding Rests}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Frame>
+                    <Frame Grid.Row="9" Grid.Column="1">
+                        <Stepper Minimum="0" Value="{Binding Rests}" />
                     </Frame>
                 </Grid>
             </StackLayout>

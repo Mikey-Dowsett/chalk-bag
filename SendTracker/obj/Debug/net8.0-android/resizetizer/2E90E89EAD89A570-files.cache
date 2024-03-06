@@ -1,11 +1,10 @@
 ﻿obj\Debug\net8.0-android\resizetizer\r\drawable\add.png
-obj\Debug\net8.0-android\resizetizer\r\drawable\friends.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\delete.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\edit.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\gallery.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\mountain.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\photo.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\setting.png
-obj\Debug\net8.0-android\resizetizer\r\drawable\vgallery.png
-obj\Debug\net8.0-android\resizetizer\r\drawable\video.png
 obj\Debug\net8.0-android\resizetizer\r\mipmap-anydpi-v26\appicon.xml
 obj\Debug\net8.0-android\resizetizer\r\mipmap-anydpi-v26\appicon_round.xml
 obj\Debug\net8.0-android\resizetizer\r\mipmap-hdpi\appicon.png

@@ -73,6 +73,26 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
         }
     }
 
+    private int falls;
+    public int Falls {
+        get => falls;
+        set {
+            if (falls == value) return;
+            falls = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Falls)));
+        }
+    }
+
+    private int rests;
+    public int Rests {
+        get => rests;
+        set {
+            if (rests == value) return;
+            rests = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Rests)));
+        }
+    }
+
     private void ShowOptions(object obj) {
         OptionsVisible = !OptionsVisible;
     }
@@ -125,7 +145,7 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
             Route route = null;
             if (RouteId == 0) {
                 route = new(SendName, ClimbType, Grade, Technique, Attempts, Notes, RockType, PhotoPath,
-                    DateTime.Now, Duration, Pitches, Proposed);
+                    DateTime.Now, Duration, Pitches, Proposed, rests, falls);
             }
             else {
                 route = await database.GetRouteAsync(RouteId);
@@ -140,6 +160,8 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
                 route.Duration = Duration;
                 route.Pitches = Pitches;
                 route.Proposed = Proposed;
+                route.Falls = Falls;
+                route.Rests = Rests;
             }
             await database.SaveRouteAsync(route);
             if (route.SendName == null || route.SendName == string.Empty) {

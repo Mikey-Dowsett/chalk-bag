@@ -13,56 +13,48 @@
     </ContentPage.ToolbarItems>
 
     <ContentView HorizontalOptions="Fill">
-        <Grid>
-            <CollectionView ItemsSource="{Binding Routes}" SelectionMode="None" 
-                            BackgroundColor="{StaticResource PrimaryDark}"
-                            HorizontalOptions="Fill">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="5" />
-                </CollectionView.ItemsLayout>
-                
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="model:Route" >
-                        <Frame>
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer
-                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, 
-                                        Path=OpenRoutePageCommand}"
-                                    CommandParameter="{Binding Id}" />
-                            </Frame.GestureRecognizers>
-                            <Grid RowDefinitions="350, 1.5*, Auto, *" Padding="0, 5" RowSpacing="10">
-                                <Image Grid.Row="0" Source="{Binding PhotoPath}"
-                                       HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill"
-                                       WidthRequest="400">
-                                    <Image.Clip>
-                                        <RoundRectangleGeometry Rect="25, 0, 350, 350" CornerRadius="10" />
-                                    </Image.Clip>
-                                </Image>
-                                <Label Grid.Row="1" Padding="15, 0, 0, 0">
-                                    <Label.FormattedText>
-                                        <FormattedString>
-                                            <Span Text="{Binding SendName}"/>
-                                            <Span Text=" - " />
-                                            <Span Text="{Binding Grade}" />
-                                        </FormattedString>
-                                    </Label.FormattedText>
-                                </Label>
-                                <Label Grid.Row="2" Text="{Binding Notes}" FontSize="15"
-                                       Padding="15, 0, 0, 0"/>
-                                <Label Grid.Row="3" Text="{Binding Date}" FontSize="10"
-                                       Padding="15, 0, 0, 0"/>
-                            </Grid>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-
-            <!-- <ImageButton Aspect="AspectFit" Source="add.png" ZIndex="1" HeightRequest="60" -->
-            <!--              WidthRequest="60" VerticalOptions="End" HorizontalOptions="End" -->
-            <!--              Command="{Binding OpenNewRouteCommand}" -->
-            <!--              BackgroundColor="{StaticResource PrimaryLight}" -->
-            <!--              CornerRadius="30" Margin="0, 0, 10, 10"/> -->
-        </Grid>
+        <CollectionView ItemsSource="{Binding Routes}" SelectionMode="None" 
+                        BackgroundColor="{StaticResource PrimaryDark}"
+                        HorizontalOptions="Fill">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="5" />
+            </CollectionView.ItemsLayout>
+            
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Route" >
+                    <Frame>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, 
+                                    Path=OpenRoutePageCommand}"
+                                CommandParameter="{Binding Id}" />
+                        </Frame.GestureRecognizers>
+                        <Grid RowDefinitions="350, 1.5*, Auto, *" Padding="0, 5" RowSpacing="10">
+                            <Image Grid.Row="0" Source="{Binding PhotoPath}"
+                                   HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill"
+                                   WidthRequest="400">
+                                <Image.Clip>
+                                    <RoundRectangleGeometry Rect="25, 0, 350, 350" CornerRadius="10" />
+                                </Image.Clip>
+                            </Image>
+                            <Label Grid.Row="1" Padding="15, 0, 0, 0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding SendName}"/>
+                                        <Span Text=" - " />
+                                        <Span Text="{Binding Grade}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label Grid.Row="2" Text="{Binding Notes}" FontSize="15"
+                                   Padding="15, 0, 0, 0"/>
+                            <Label Grid.Row="3" Text="{Binding Date}" FontSize="10"
+                                   Padding="15, 0, 0, 0"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </ContentView>
 
 </ContentPage>

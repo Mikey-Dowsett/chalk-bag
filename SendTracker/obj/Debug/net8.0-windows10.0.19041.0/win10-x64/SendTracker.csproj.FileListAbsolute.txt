@@ -154,9 +154,6 @@ C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\photo.scale-100.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\setting.scale-100.png
-C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\video.scale-100.png
-C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\vgallery.scale-100.png
-C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\friends.scale-100.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\add.scale-100.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\mountain.scale-100.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.stamp
@@ -188,3 +185,5 @@ C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\gallery.scale-100.png
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete.scale-100.png
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\edit.scale-100.png
