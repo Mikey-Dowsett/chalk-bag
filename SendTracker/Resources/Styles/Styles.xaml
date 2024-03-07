@@ -5,7 +5,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Shadow Brush="Black" x:Key="Shadow" Offset="10, 25" Radius="10" Opacity="0.8" />
+    <Shadow Brush="Black" x:Key="Shadow" Offset="25, 25" Radius="10" Opacity="0.8" />
 
     <Style TargetType="TabBar">
         <Setter Property="Shell.UnselectedColor" Value="{StaticResource PrimaryDark}" />
@@ -50,12 +50,12 @@
         </Setter>
 
     </Style>
-    
+
     <Style TargetType="ImageButton">
         <Setter Property="Aspect" Value="AspectFit" />
         <Setter Property="HeightRequest" Value="50" />
         <Setter Property="WidthRequest" Value="50" />
-        
+
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
@@ -81,7 +81,7 @@
         <Setter Property="MinimumWidthRequest" Value="44" />
         <Setter Property="MaxLength" Value="20" />
     </Style>
-    
+
     <Style TargetType="Editor">
         <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
         <Setter Property="PlaceholderColor" Value="{StaticResource SecondaryLight}" />
@@ -98,11 +98,13 @@
 
     <Style TargetType="Frame">
         <Setter Property="BackgroundColor" Value="{StaticResource PrimaryLight}" />
+        <Setter Property="HasShadow" Value="False" />
+        <Setter Property="CornerRadius" Value="10" />
     </Style>
 
     <Style TargetType="Picker">
         <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
-        <Setter Property="TitleColor" Value="{StaticResource PrimaryDark}" />
+        <Setter Property="TitleColor" Value="{StaticResource SecondaryLight}" />
         <Setter Property="BackgroundColor" Value="Transparent" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="FontSize" Value="20" />

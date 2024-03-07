@@ -10,13 +10,10 @@
     BackgroundColor="{StaticResource Action}">
 
     <TabBar>
-        <Tab Title="Routes" Icon="mountain.png">
+        <Tab Title="Routes" Icon="routes.png">
             <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
         </Tab>
-        <!-- <Tab Title="Friends" Icon="friends.png"> -->
-        <!--     <ShellContent ContentTemplate="{DataTemplate views:MainPage}" /> -->
-        <!-- </Tab> -->
-        <Tab Title="Settings" Icon="setting.png">
+        <Tab Title="Settings" Icon="settings.png">
             <ShellContent ContentTemplate="{DataTemplate views:SettingsPage}" />
         </Tab>
     </TabBar>

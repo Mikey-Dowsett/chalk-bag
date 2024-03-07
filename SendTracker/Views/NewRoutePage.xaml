@@ -9,199 +9,200 @@
              Title="New Route"
              Shell.TabBarIsVisible="False">
 
-    <ScrollView HorizontalOptions="Fill" VerticalOptions="Start">
-        <Grid RowDefinitions="*, *, *, *, *, *, *, *, *, *, *" ColumnDefinitions="*, *" RowSpacing="10">
-            <Frame Grid.Row="0" Grid.ColumnSpan="2">
-                <Entry x:Name="RouteName" Placeholder="Route Name" Text="{Binding SendName}" />
-            </Frame>
-
-            <Frame Grid.Row="1" Grid.ColumnSpan="2">
-                <Editor x:Name="RouteDescription" AutoSize="TextChanges" FontSize="20" Placeholder="Notes"
-                        Text="{Binding Notes}" />
-            </Frame>
-
-            <StackLayout Grid.Row="2" Grid.ColumnSpan="2">
-                <Frame>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding OptionsCommand}" />
-                    </Frame.GestureRecognizers>
-                    <Label Text="Route Information"></Label>
+    <Grid RowDefinitions="*, 25">
+        <ScrollView HorizontalOptions="Fill" VerticalOptions="Start" Padding="20" Grid.Row="0">
+            <Grid RowDefinitions="*, *, *, *, *, *, *, *, *, *, *" ColumnDefinitions="*, *" RowSpacing="10">
+                <Frame Grid.Row="0" Grid.ColumnSpan="2">
+                    <Entry x:Name="RouteName" Placeholder="Route Name" Text="{Binding SendName}" />
                 </Frame>
-                <Grid RowDefinitions="80, 80, 80, 80, 80, 80, 80, 80, 80, 80" ColumnDefinitions=".5*, .5*" x:Name="Options" 
-                      IsVisible="{Binding OptionsVisible}" Padding="10, 0, 10, 0">
-                    <Frame Grid.Row="0" Grid.Column="0">
-                        <Label Text="Climb Type" VerticalTextAlignment="Center" FontSize="15" />
-                    </Frame>
-                    <Frame Grid.Row="0" Grid.Column="1">
-                        <Picker x:Name="ClimbType" Title="Select an option" FontSize="15" 
-                                SelectedItem="{Binding ClimbType}">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>Boulder</x:String>
-                                    <x:String>Highball</x:String>
-                                    <x:String>Top Rope</x:String>
-                                    <x:String>Lead</x:String>
-                                    <x:String>Trad</x:String>
-                                    <x:String>Sport</x:String>
-                                    <x:String>Free</x:String>
-                                    <x:String>Rope Solo</x:String>
-                                    <x:String>Deep Water</x:String>
-                                    <x:String>Speed Climb</x:String>
-                                    <x:String>Free Solo</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
-                    </Frame>
 
-                    <Frame Grid.Row="1" Grid.Column="0">
-                        <Label Text="Grade" VerticalTextAlignment="Center" FontSize="15" />
-                    </Frame>
-                    <Frame Grid.Row="1" Grid.Column="1" x:Name="TallWallParent">
-                        <Picker x:Name="TallWallGrades" Title="Select an option" FontSize="15"
-                                SelectedItem="{Binding Grade}">
-                        </Picker>
-                    </Frame>
-                    <Frame Grid.Row="1" Grid.Column="1" x:Name="BoulderParent">
-                        <Picker x:Name="BoulderGrades" Title="Select an option" FontSize="15"
-                                SelectedItem="{Binding Grade}">
-                        </Picker>
-                    </Frame>
-                    
-                    <Frame Grid.Row="2" Grid.Column="0">
-                        <Label Text="Proposed Grade?" VerticalTextAlignment="Center" FontSize="15"></Label>
-                    </Frame>
-                    <Frame Grid.Row="2" Grid.Column="1">
-                        <CheckBox IsChecked="{Binding Proposed}" />
-                    </Frame>
+                <Frame Grid.Row="1" Grid.ColumnSpan="2">
+                    <Editor x:Name="RouteDescription" AutoSize="TextChanges" FontSize="20" Placeholder="Notes"
+                            Text="{Binding Notes}" />
+                </Frame>
+                
+                <Frame Grid.Row="2" Grid.ColumnSpan="2">
+                    <Grid ColumnDefinitions=".5*, .5*">
+                        <Label Grid.Column="0" Text="{Binding MediaText}" VerticalTextAlignment="Center" />
 
-                    <Frame Grid.Row="3" Grid.Column="0">
-                        <Label Text="Technique" VerticalTextAlignment="Center" FontSize="15" />
-                    </Frame>
-                    <Frame Grid.Row="3" Grid.Column="1">
-                        <Picker x:Name="Technique" Title="Select an option" FontSize="15"
-                                SelectedItem="{Binding Technique}">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>Face</x:String>
-                                    <x:String>Slab</x:String>
-                                    <x:String>Crack</x:String>
-                                    <x:String>Overhang</x:String>
-                                    <x:String>Ceiling</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
-                    </Frame>
+                        <Grid Grid.Column="1" ColumnDefinitions="*, *" RowDefinitions="50, Auto">
+                            <ImageButton Source="photo.png" Grid.Column="0" Grid.Row="0"
+                                         Command="{Binding TakePhotoCommand}" CommandParameter="photo" />
+                            <ImageButton Source="gallery.png" Grid.Column="2" Grid.Row="0"
+                                         Command="{Binding TakePhotoCommand}" CommandParameter="photos" />
+                        </Grid>
+                    </Grid>
+                </Frame>
 
-                    <Frame Grid.Row="4" Grid.Column="0">
-                        <Label Text="Attempts" VerticalTextAlignment="Center" FontSize="15" />
+                <StackLayout Grid.Row="3" Grid.ColumnSpan="2">
+                    <Frame>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding OptionsCommand}" />
+                        </Frame.GestureRecognizers>
+                        <Label Text="Route Information" />
                     </Frame>
-                    <Frame Grid.Row="4" Grid.Column="1">
-                        <Picker x:Name="Attempts" Title="Select an option" FontSize="15"
-                                SelectedItem="{Binding Attempts}">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>Flash</x:String>
-                                    <x:String>2</x:String>
-                                    <x:String>3</x:String>
-                                    <x:String>4+</x:String>
-                                    <x:String>In Progress</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
-                    </Frame>
+                    <Grid RowDefinitions="80, 80, 80, 80, 80, 80, 80, 80, 80, 80" ColumnDefinitions=".5*, .5*"
+                          x:Name="Options"
+                          IsVisible="{Binding OptionsVisible}" Padding="10, 0, 10, 0">
+                        <Frame Grid.Row="0" Grid.Column="0" CornerRadius="0">
+                            <Label Text="Climb Type" VerticalTextAlignment="Center" FontSize="15" />
+                        </Frame>
+                        <Frame Grid.Row="0" Grid.Column="1" CornerRadius="0">
+                            <Picker x:Name="ClimbType" Title="Select an option" FontSize="15"
+                                    SelectedItem="{Binding ClimbType}">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Boulder</x:String>
+                                        <x:String>Highball</x:String>
+                                        <x:String>Top Rope</x:String>
+                                        <x:String>Lead</x:String>
+                                        <x:String>Trad</x:String>
+                                        <x:String>Sport</x:String>
+                                        <x:String>Free</x:String>
+                                        <x:String>Rope Solo</x:String>
+                                        <x:String>Deep Water</x:String>
+                                        <x:String>Speed Climb</x:String>
+                                        <x:String>Free Solo</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                        </Frame>
 
-                    <Frame Grid.Row="5" Grid.Column="0">
-                        <Label Text="Rock Type" VerticalTextAlignment="Center" FontSize="15" />
-                    </Frame>
-                    <Frame Grid.Row="5" Grid.Column="1">
-                        <Picker x:Name="RockType" Title="Select an option" FontSize="15"
-                                SelectedItem="{Binding RockType}">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>Plastic</x:String>
-                                    <x:String>Wood</x:String>
-                                    <x:String>Granite</x:String>
-                                    <x:String>Sandstone</x:String>
-                                    <x:String>Basalt</x:String>
-                                    <x:String>Quartzite</x:String>
-                                    <x:String>Limestone</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
-                    </Frame>
-                    
-                    <Frame Grid.Row="6" Grid.Column="0">
-                        <Label Text="Duration" VerticalTextAlignment="Center" FontSize="15" />
-                    </Frame>
-                    <Frame Grid.Row="6" Grid.Column="5">
-                        <Entry Placeholder="00:00:00" FontSize="15" MaxLength="8" Keyboard="{x:Static Keyboard.Numeric}" 
-                                x:Name="TimeInput" TextChanged="TimeInput_OnTextChanged" Text="{Binding Duration}">
-                            <Entry.Behaviors>
-                                <toolkit:MaskedBehavior Mask="XX:XX:XX"/>
-                            </Entry.Behaviors>
-                        </Entry>
-                    </Frame>
-                    
-                    <Frame Grid.Row="7" Grid.Column="0">
-                        <Label VerticalTextAlignment="Center" FontSize="15">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="Pitches: " />
-                                    <Span Text="{Binding Pitches}" />
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                    </Frame>
-                    <Frame Grid.Row="7" Grid.Column="1">
-                        <Stepper Minimum="0" Value="{Binding Pitches}" />
-                    </Frame>
-                    
-                    <Frame Grid.Row="8" Grid.Column="0">
-                        <Label VerticalTextAlignment="Center" FontSize="15">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="Falls: " />
-                                    <Span Text="{Binding Falls}" />
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                    </Frame>
-                    <Frame Grid.Row="8" Grid.Column="1">
-                        <Stepper Minimum="0" Value="{Binding Falls}" />
-                    </Frame>
-                    
-                    <Frame Grid.Row="9" Grid.Column="0">
-                        <Label VerticalTextAlignment="Center" FontSize="15">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="Rests: " />
-                                    <Span Text="{Binding Rests}" />
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                    </Frame>
-                    <Frame Grid.Row="9" Grid.Column="1">
-                        <Stepper Minimum="0" Value="{Binding Rests}" />
-                    </Frame>
-                </Grid>
-            </StackLayout>
+                        <Frame Grid.Row="1" Grid.Column="0" CornerRadius="0">
+                            <Label Text="Grade" VerticalTextAlignment="Center" FontSize="15" />
+                        </Frame>
+                        <Frame Grid.Row="1" Grid.Column="1" x:Name="TallWallParent" CornerRadius="0">
+                            <Picker x:Name="TallWallGrades" Title="Select an option" FontSize="15"
+                                    SelectedItem="{Binding Grade}" />
+                        </Frame>
+                        <Frame Grid.Row="1" Grid.Column="1" x:Name="BoulderParent" CornerRadius="0">
+                            <Picker x:Name="BoulderGrades" Title="Select an option" FontSize="15"
+                                    SelectedItem="{Binding Grade}" />
+                        </Frame>
 
+                        <Frame Grid.Row="2" Grid.Column="0" CornerRadius="0">
+                            <Label Text="Proposed Grade?" VerticalTextAlignment="Center" FontSize="15" />
+                        </Frame>
+                        <Frame Grid.Row="2" Grid.Column="1" CornerRadius="0">
+                            <CheckBox IsChecked="{Binding Proposed}" />
+                        </Frame>
 
-            <Frame Grid.Row="3" Grid.Column="0">
-                <Label Text="{Binding MediaText}" VerticalTextAlignment="Center" />
-            </Frame>
-            <Frame Grid.Row="3" Grid.Column="1">
-                <Grid ColumnDefinitions="*, *" RowDefinitions="50, Auto">
-                    <ImageButton Source="photo.png" Grid.Column="0" Grid.Row="0"
-                                 Command="{Binding TakePhotoCommand}" CommandParameter="photo" />
-                    <ImageButton Source="gallery.png" Grid.Column="2" Grid.Row="0"
-                                 Command="{Binding TakePhotoCommand}" CommandParameter="photos"/>
-                </Grid>
-            </Frame>
-            <!-- <Button Grid.Row="8" Grid.ColumnSpan="2" Text="{Binding PhotoButtonText}" -->
-            <!--         Command="{Binding TakePhotoCommand}" HeightRequest="50" /> -->
-            <Button Grid.Row="4" Grid.ColumnSpan="2" Text="Save Route" HeightRequest="50"
-                    Command="{Binding SaveRouteCommand}" Margin="10" VerticalOptions="End"/>
-        </Grid>
+                        <Frame Grid.Row="3" Grid.Column="0" CornerRadius="0">
+                            <Label Text="Technique" VerticalTextAlignment="Center" FontSize="15" />
+                        </Frame>
+                        <Frame Grid.Row="3" Grid.Column="1" CornerRadius="0">
+                            <Picker x:Name="Technique" Title="Select an option" FontSize="15"
+                                    SelectedItem="{Binding Technique}">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Face</x:String>
+                                        <x:String>Slab</x:String>
+                                        <x:String>Crack</x:String>
+                                        <x:String>Overhang</x:String>
+                                        <x:String>Ceiling</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                        </Frame>
+
+                        <Frame Grid.Row="4" Grid.Column="0" CornerRadius="0">
+                            <Label Text="Attempts" VerticalTextAlignment="Center" FontSize="15" />
+                        </Frame>
+                        <Frame Grid.Row="4" Grid.Column="1" CornerRadius="0">
+                            <Picker x:Name="Attempts" Title="Select an option" FontSize="15"
+                                    SelectedItem="{Binding Attempts}">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>On Sight</x:String>
+                                        <x:String>Flash</x:String>
+                                        <x:String>Redpoint</x:String>
+                                        <x:String>In Progress</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                        </Frame>
+
+                        <Frame Grid.Row="5" Grid.Column="0" CornerRadius="0">
+                            <Label Text="Rock Type" VerticalTextAlignment="Center" FontSize="15" />
+                        </Frame>
+                        <Frame Grid.Row="5" Grid.Column="1" CornerRadius="0">
+                            <Picker x:Name="RockType" Title="Select an option" FontSize="15"
+                                    SelectedItem="{Binding RockType}">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Plastic</x:String>
+                                        <x:String>Wood</x:String>
+                                        <x:String>Granite</x:String>
+                                        <x:String>Sandstone</x:String>
+                                        <x:String>Basalt</x:String>
+                                        <x:String>Quartzite</x:String>
+                                        <x:String>Limestone</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                        </Frame>
+
+                        <Frame Grid.Row="6" Grid.Column="0" CornerRadius="0">
+                            <Label Text="Duration" VerticalTextAlignment="Center" FontSize="15" />
+                        </Frame>
+                        <Frame Grid.Row="6" Grid.Column="1" CornerRadius="0">
+                            <Entry Placeholder="00:00:00" FontSize="15" MaxLength="8"
+                                   Keyboard="{x:Static Keyboard.Numeric}"
+                                   x:Name="TimeInput" TextChanged="TimeInput_OnTextChanged" Text="{Binding Duration}">
+                                <Entry.Behaviors>
+                                    <toolkit:MaskedBehavior Mask="XX:XX:XX" />
+                                </Entry.Behaviors>
+                            </Entry>
+                        </Frame>
+
+                        <Frame Grid.Row="7" Grid.Column="0" CornerRadius="0">
+                            <Label VerticalTextAlignment="Center" FontSize="15">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Pitches: " />
+                                        <Span Text="{Binding Pitches}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Frame>
+                        <Frame Grid.Row="7" Grid.Column="1" CornerRadius="0">
+                            <Stepper Minimum="0" Value="{Binding Pitches}"  />
+                        </Frame>
+
+                        <Frame Grid.Row="8" Grid.Column="0" CornerRadius="0">
+                            <Label VerticalTextAlignment="Center" FontSize="15">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Falls: " />
+                                        <Span Text="{Binding Falls}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Frame>
+                        <Frame Grid.Row="8" Grid.Column="1" CornerRadius="0">
+                            <Stepper Minimum="0" Value="{Binding Falls}" />
+                        </Frame>
+
+                        <Frame Grid.Row="9" Grid.Column="0" CornerRadius="0">
+                            <Label VerticalTextAlignment="Center" FontSize="15">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Rests: " />
+                                        <Span Text="{Binding Rests}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Frame>
+                        <Frame Grid.Row="9" Grid.Column="1" CornerRadius="0">
+                            <Stepper Minimum="0" Value="{Binding Rests}" />
+                        </Frame>
+                    </Grid>
+                </StackLayout>
+            </Grid>
+            
+        
     </ScrollView>
+        <Button Grid.Row="1" Text="Save Route" HeightRequest="50"
+            Command="{Binding SaveRouteCommand}" Margin="10" VerticalOptions="End" />
+    </Grid>
 </ContentPage>

@@ -1,5 +1,4 @@
-﻿using SendTracker.Data;
-using SendTracker.Models;
+﻿using SendTracker.Models;
 using SendTracker.ViewModel;
 
 namespace SendTracker.Views;
@@ -20,53 +19,40 @@ public partial class RoutePage : ContentPage {
         Grade.Text = $"{route.Grade}";
         Date.Text = $"{route.Date}";
 
-        if (route.Attempts == null) {
+        if (route.Attempts == null)
             AttemptsParent.IsVisible = false;
-        }
-        else {
+        else
             Attempts.Text = $"{route.Attempts}";
-        }
 
-        if (route.Technique == null) {
+        if (route.Technique == null)
             TechniqueParent.IsVisible = false;
-        } else {
+        else
             Technique.Text = $"{route.Technique}";
-        }
 
-        if (route.RockType == null) {
+        if (route.RockType == null)
             RockTypeParent.IsVisible = false;
-        }
-        else {
+        else
             RockType.Text = $"{route.RockType}";
-        }
 
-        if (route.Duration == null) {
+        if (route.Duration == null)
             DurationParent.IsVisible = false;
-        }
-        else {
+        else
             Duration.Text = $"{route.Duration}";
-        }
 
-        if (route.Pitches == 0) {
+        if (route.Pitches == 0)
             PitchesParent.IsVisible = false;
-        }
-        else {
+        else
             Pitches.Text = $"{route.Pitches}";
-        }
 
-        if (route.Falls == 0) {
+        if (route.Falls == 0)
             FallsParent.IsVisible = false;
-        }
-        else {
+        else
             Falls.Text = $"{route.Falls}";
-        }
 
-        if (route.Rests == 0) {
+        if (route.Rests == 0)
             RestsParent.IsVisible = false;
-        }
-        else {
+        else
             Rests.Text = $"{route.Rests}";
-        }
 
         if (route.Notes == null)
             Notes.IsVisible = false;

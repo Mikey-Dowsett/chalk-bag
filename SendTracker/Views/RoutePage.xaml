@@ -6,20 +6,20 @@
              xmlns:viewmodel="clr-namespace:SendTracker.ViewModel"
              x:DataType="viewmodel:RoutePageViewModel"
              Title="Route Page">
-    
+
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Edit" Command="{Binding EditCurrentRouteCommand}" IconImageSource="edit.png"/>
-        <ToolbarItem Text="Delete" Command="{Binding DeleteCurrentRouteCommand}" IconImageSource="delete.png"/>
+        <ToolbarItem Text="Edit" Command="{Binding EditCurrentRouteCommand}" IconImageSource="edit.png" />
+        <ToolbarItem Text="Delete" Command="{Binding DeleteCurrentRouteCommand}" IconImageSource="delete.png" />
     </ContentPage.ToolbarItems>
-    
+
     <ContentPage.Content>
         <ScrollView Padding="20">
             <Grid RowDefinitions="*, *, *, *, *, *, *, *, *, *, *, *"
-                   HorizontalOptions="Fill" VerticalOptions="Start">
-                
-                <Image Grid.Row="0" x:Name="Photo" Margin="0, 2.5"/>
+                  HorizontalOptions="Fill" VerticalOptions="Start">
+
+                <Image Grid.Row="0" x:Name="Photo" Margin="0, 2.5" />
                 <Label Grid.Row="1" x:Name="Notes" Margin="0, 2.5" />
-                
+
                 <Label Grid.Row="2" FontSize="15" Margin="0, 2.5">
                     <Label.FormattedText>
                         <FormattedString>
@@ -37,7 +37,7 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                
+
                 <Label Grid.Row="4" FontSize="15" x:Name="AttemptsParent" Margin="0, 2.5">
                     <Label.FormattedText>
                         <FormattedString>
@@ -46,7 +46,7 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                
+
                 <Label Grid.Row="5" FontSize="15" x:Name="TechniqueParent" Margin="0, 2.5">
                     <Label.FormattedText>
                         <FormattedString>
@@ -55,52 +55,52 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                
+
                 <Label Grid.Row="6" FontSize="15" x:Name="RockTypeParent" Margin="0, 2.5">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Rock Type: " FontAttributes="Bold"  />
-                            <Span x:Name="RockType"/>
+                            <Span Text="Rock Type: " FontAttributes="Bold" />
+                            <Span x:Name="RockType" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                
+
                 <Label Grid.Row="7" FontSize="15" x:Name="DurationParent" Margin="0, 2.5">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Duration: " FontAttributes="Bold"  />
-                            <Span x:Name="Duration"/>
+                            <Span Text="Duration: " FontAttributes="Bold" />
+                            <Span x:Name="Duration" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                
+
                 <Label Grid.Row="8" FontSize="15" x:Name="PitchesParent" Margin="0, 2.5">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="Pitches: " FontAttributes="Bold" />
-                            <Span x:Name="Pitches"/>
+                            <Span x:Name="Pitches" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                
+
                 <Label Grid.Row="9" FontSize="15" x:Name="FallsParent" Margin="0, 2.5">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Falls: " FontAttributes="Bold"  />
-                            <Span x:Name="Falls"/>
+                            <Span Text="Falls: " FontAttributes="Bold" />
+                            <Span x:Name="Falls" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                
+
                 <Label Grid.Row="10" FontSize="15" x:Name="RestsParent" Margin="0, 2.5">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Rests: " FontAttributes="Bold"  />
-                            <Span x:Name="Rests"/>
+                            <Span Text="Rests: " FontAttributes="Bold" />
+                            <Span x:Name="Rests" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                
+
                 <Label Grid.Row="11" FontSize="15" Margin="0, 2.5">
                     <Label.FormattedText>
                         <FormattedString>
