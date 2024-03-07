@@ -19,6 +19,8 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
 
     private bool optionsVisible;
 
+    private int pitches;
+
     private bool proposed;
 
     private int rests;
@@ -69,7 +71,6 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
         }
     }
 
-    private int pitches;
     public int Pitches {
         get => pitches;
         set {
@@ -175,7 +176,7 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
                 route.SendName = $"Climb {route.Id}";
                 await database.SaveRouteAsync(route);
             }
-            
+
             CancellationTokenSource cancellationToken = new();
             IToast toast = Toast.Make("Route Saved!", ToastDuration.Short, 25);
             await toast.Show(cancellationToken.Token);

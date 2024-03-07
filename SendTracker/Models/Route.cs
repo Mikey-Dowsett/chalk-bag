@@ -22,7 +22,7 @@ public class Route {
         Proposed = proposed;
         Rests = rests;
         Falls = falls;
-        
+
         LoadEmoji();
     }
 
@@ -49,15 +49,20 @@ public class Route {
 
     public void LoadEmoji() {
         switch (Attempts) {
-            case "Flash": AttemptEmoji = "\u26a1";
+            case "Flash":
+                AttemptEmoji = "\u26a1";
                 break;
-            case "Redpoint": AttemptEmoji = "\ud83d\udccc";
+            case "Redpoint":
+                AttemptEmoji = "\ud83d\udccc";
                 break;
-            case "On Sight": AttemptEmoji = "\ud83d\udc41\ufe0f";
+            case "On Sight":
+                AttemptEmoji = "\ud83d\udc41\ufe0f";
                 break;
-            case "In Progress": AttemptEmoji = "\ud83e\udea2";
+            case "In Progress":
+                AttemptEmoji = "\ud83e\udea2";
                 break;
-            default: AttemptEmoji = Attempts;
+            default:
+                AttemptEmoji = Attempts;
                 break;
         }
     }

@@ -6,7 +6,9 @@
              xmlns:viewmodel="clr-namespace:SendTracker.ViewModel"
              xmlns:model="clr-namespace:SendTracker.Models"
              x:DataType="viewmodel:MainViewModel"
-             Title="Send Tracker">
+             Title="Send Tracker"
+             BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryLight},
+                Dark={StaticResource PrimaryDark}}">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="add.png" Command="{Binding OpenNewRouteCommand}" />
@@ -30,8 +32,7 @@
                         </Frame.GestureRecognizers>
                         <Grid RowDefinitions="300, 1.5*, Auto, *" RowSpacing="10">
                             <Image Grid.Row="0" Source="{Binding PhotoPath}" Aspect="AspectFill"
-                                   WidthRequest="350">
-                            </Image>
+                                   WidthRequest="350" />
                             <Label Grid.Row="1">
                                 <Label.FormattedText>
                                     <FormattedString>
@@ -39,7 +40,7 @@
                                         <Span Text=" - " />
                                         <Span Text="{Binding Grade}" />
                                         <Span Text=" - " />
-                                        <Span Text="{Binding AttemptEmoji}"></Span>
+                                        <Span Text="{Binding AttemptEmoji}" />
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>

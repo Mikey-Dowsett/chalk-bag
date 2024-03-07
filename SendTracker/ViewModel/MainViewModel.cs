@@ -24,9 +24,7 @@ public partial class MainViewModel : ObservableObject {
         RoutesDatabase database = new();
         List<Route> newRoutes = await database.GetRoutesAsync();
         Routes.Clear();
-        foreach (Route route in newRoutes) {
-            Routes.Add(route);
-        }
+        foreach (Route route in newRoutes) Routes.Add(route);
     }
 
     [RelayCommand]

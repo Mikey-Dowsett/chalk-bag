@@ -7,7 +7,9 @@
              xmlns:viewmodel="clr-namespace:SendTracker.ViewModel"
              x:DataType="viewmodel:NewRouteViewModel"
              Title="New Route"
-             Shell.TabBarIsVisible="False">
+             Shell.TabBarIsVisible="False"
+             BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryLight},
+                Dark={StaticResource PrimaryDark}}">
 
     <Grid RowDefinitions="*, 25">
         <ScrollView HorizontalOptions="Fill" VerticalOptions="Start" Padding="20" Grid.Row="0">
@@ -20,7 +22,7 @@
                     <Editor x:Name="RouteDescription" AutoSize="TextChanges" FontSize="20" Placeholder="Notes"
                             Text="{Binding Notes}" />
                 </Frame>
-                
+
                 <Frame Grid.Row="2" Grid.ColumnSpan="2">
                     <Grid ColumnDefinitions=".5*, .5*">
                         <Label Grid.Column="0" Text="{Binding MediaText}" VerticalTextAlignment="Center" />
@@ -166,7 +168,7 @@
                             </Label>
                         </Frame>
                         <Frame Grid.Row="7" Grid.Column="1" CornerRadius="0">
-                            <Stepper Minimum="0" Value="{Binding Pitches}"  />
+                            <Stepper Minimum="0" Value="{Binding Pitches}" />
                         </Frame>
 
                         <Frame Grid.Row="8" Grid.Column="0" CornerRadius="0">
@@ -199,10 +201,10 @@
                     </Grid>
                 </StackLayout>
             </Grid>
-            
-        
-    </ScrollView>
+
+
+        </ScrollView>
         <Button Grid.Row="1" Text="Save Route" HeightRequest="50"
-            Command="{Binding SaveRouteCommand}" Margin="10" VerticalOptions="End" />
+                Command="{Binding SaveRouteCommand}" Margin="10" VerticalOptions="End" />
     </Grid>
 </ContentPage>

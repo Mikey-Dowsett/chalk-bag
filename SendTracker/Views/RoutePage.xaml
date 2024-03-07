@@ -5,7 +5,9 @@
              x:Class="SendTracker.Views.RoutePage"
              xmlns:viewmodel="clr-namespace:SendTracker.ViewModel"
              x:DataType="viewmodel:RoutePageViewModel"
-             Title="Route Page">
+             Title="Route Page"
+             BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryLight},
+                Dark={StaticResource PrimaryDark}}">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Edit" Command="{Binding EditCurrentRouteCommand}" IconImageSource="edit.png" />

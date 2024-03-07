@@ -7,30 +7,32 @@
 
     <Shadow Brush="Black" x:Key="Shadow" Offset="25, 25" Radius="10" Opacity="0.8" />
 
+    <Style TargetType="ContentPage">
+        <Setter Property="BackgroundColor"
+                Value="{AppThemeBinding Light={StaticResource PrimaryLight},
+                Dark={StaticResource PrimaryDark}}" />
+    </Style>
+
     <Style TargetType="TabBar">
-        <Setter Property="Shell.UnselectedColor" Value="{StaticResource PrimaryDark}" />
-        <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource Action}" />
-        <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource PrimaryLight}" />
-    </Style>
-
-    <Style TargetType="ActivityIndicator">
-        <Setter Property="Color" Value="{StaticResource PrimaryLight}" />
-    </Style>
-
-    <Style TargetType="Border">
-        <Setter Property="Stroke" Value="{StaticResource SecondaryLight}" />
-        <Setter Property="StrokeThickness" Value="2" />
-        <Setter Property="StrokeShape" Value="{RoundRectangle CornerRadius=10}" />
-        <Setter Property="Margin" Value="-10" />
+        <Setter Property="Shell.UnselectedColor"
+                Value="{AppThemeBinding Light={StaticResource PrimaryDark}, Dark={StaticResource PrimaryLight}}" />
+        <Setter Property="Shell.TabBarTitleColor"
+                Value="{AppThemeBinding Light={StaticResource Action}, Dark={StaticResource ActionDark}}" />
+        <Setter Property="Shell.TabBarBackgroundColor"
+                Value="{AppThemeBinding Light={StaticResource SecondaryLight}, Dark={StaticResource SecondaryDark}}" />
     </Style>
 
     <Style TargetType="Button">
-        <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
-        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryLight}" />
-        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="TextColor"
+                Value="{AppThemeBinding Light={StaticResource PrimaryDark}, Dark={StaticResource PrimaryLight}}" />
+        <Setter Property="BackgroundColor"
+                Value="{AppThemeBinding Light={StaticResource PrimaryLight}, Dark={StaticResource PrimaryDark}}" />
+        <Setter Property="FontFamily" Value="NunitoRegular" />
         <Setter Property="FontSize" Value="20" />
         <Setter Property="BorderWidth" Value="2.5" />
-        <Setter Property="BorderColor" Value="{StaticResource Action}" />
+        <Setter Property="BorderColor"
+                Value="{AppThemeBinding Light={StaticResource Action}, Dark={StaticResource ActionDark}}" />
+        <Setter Property="CornerRadius" Value="50" />
         <Setter Property="Padding" Value="0,0" />
         <Setter Property="MinimumHeightRequest" Value="44" />
         <Setter Property="MinimumWidthRequest" Value="44" />
@@ -42,29 +44,8 @@
                     <VisualState x:Name="Disabled" />
                     <VisualState x:Name="Pressed">
                         <VisualState.Setters>
-                            <Setter Property="BackgroundColor" Value="{StaticResource Action}" />
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateGroupList>
-        </Setter>
-
-    </Style>
-
-    <Style TargetType="ImageButton">
-        <Setter Property="Aspect" Value="AspectFit" />
-        <Setter Property="HeightRequest" Value="50" />
-        <Setter Property="WidthRequest" Value="50" />
-
-        <Setter Property="VisualStateManager.VisualStateGroups">
-            <VisualStateGroupList>
-                <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Normal" />
-                    <VisualState x:Name="Disabled" />
-                    <VisualState x:Name="Pressed">
-                        <VisualState.Setters>
-                            <Setter Property="BackgroundColor" Value="{StaticResource SecondaryLight}" />
-                            <Setter Property="CornerRadius" Value="10" />
+                            <Setter Property="BackgroundColor"
+                                    Value="{AppThemeBinding Light={StaticResource Action}, Dark={StaticResource ActionDark}}" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
@@ -73,40 +54,48 @@
     </Style>
 
     <Style TargetType="Entry">
-        <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
-        <Setter Property="PlaceholderColor" Value="{StaticResource SecondaryLight}" />
+        <Setter Property="TextColor"
+                Value="{AppThemeBinding Light={StaticResource PrimaryDark}, Dark={StaticResource PrimaryLight}}" />
+        <Setter Property="PlaceholderColor"
+                Value="{AppThemeBinding Light={StaticResource SecondaryDark}, Dark={StaticResource SecondaryLight}}" />
         <Setter Property="FontSize" Value="20" />
-        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontFamily" Value="NunitoRegular" />
         <Setter Property="MinimumHeightRequest" Value="44" />
         <Setter Property="MinimumWidthRequest" Value="44" />
         <Setter Property="MaxLength" Value="20" />
     </Style>
 
     <Style TargetType="Editor">
-        <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
-        <Setter Property="PlaceholderColor" Value="{StaticResource SecondaryLight}" />
+        <Setter Property="TextColor"
+                Value="{AppThemeBinding Light={StaticResource PrimaryDark}, Dark={StaticResource PrimaryLight}}" />
+        <Setter Property="PlaceholderColor"
+                Value="{AppThemeBinding Light={StaticResource SecondaryDark}, Dark={StaticResource SecondaryLight}}" />
         <Setter Property="FontSize" Value="20" />
-        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontFamily" Value="NunitoRegular" />
     </Style>
 
     <Style TargetType="Label">
-        <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
+        <Setter Property="TextColor"
+                Value="{AppThemeBinding Light={StaticResource PrimaryDark}, Dark={StaticResource PrimaryLight}}" />
         <Setter Property="BackgroundColor" Value="Transparent" />
-        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontFamily" Value="NunitoRegular" />
         <Setter Property="FontSize" Value="20" />
     </Style>
 
     <Style TargetType="Frame">
-        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryLight}" />
+        <Setter Property="BackgroundColor"
+                Value="{AppThemeBinding Light={StaticResource SecondaryLight}, Dark={StaticResource SecondaryDark}}" />
         <Setter Property="HasShadow" Value="False" />
         <Setter Property="CornerRadius" Value="10" />
     </Style>
 
     <Style TargetType="Picker">
-        <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
-        <Setter Property="TitleColor" Value="{StaticResource SecondaryLight}" />
+        <Setter Property="TextColor"
+                Value="{AppThemeBinding Light={StaticResource PrimaryDark}, Dark={StaticResource PrimaryLight}}" />
+        <Setter Property="TitleColor"
+                Value="{AppThemeBinding Light={StaticResource SecondaryDark}, Dark={StaticResource SecondaryLight}}" />
         <Setter Property="BackgroundColor" Value="Transparent" />
-        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontFamily" Value="NunitoRegular" />
         <Setter Property="FontSize" Value="20" />
         <Setter Property="MinimumHeightRequest" Value="44" />
         <Setter Property="MinimumWidthRequest" Value="44" />

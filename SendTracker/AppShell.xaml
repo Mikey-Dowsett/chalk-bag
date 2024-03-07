@@ -7,7 +7,7 @@
     xmlns:views="clr-namespace:SendTracker.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="Send Tracker"
-    BackgroundColor="{StaticResource Action}">
+    BackgroundColor="{AppThemeBinding Light={StaticResource Action}, Dark={StaticResource ActionDark}}">
 
     <TabBar>
         <Tab Title="Routes" Icon="routes.png">
