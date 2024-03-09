@@ -325,3 +325,7 @@ C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossim
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\appiconfore_EFB7AA74E18E9E7A098258B3388BD6FF6AFD8A2C66D9D2DA8EAFB2EF0133268B.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\appiconfore_EFB7AA74E18E9E7A098258B3388BD6FF6AFD8A2C66D9D2DA8EAFB2EF0133268B@2x.png
 C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\appiconfore_EFB7AA74E18E9E7A098258B3388BD6FF6AFD8A2C66D9D2DA8EAFB2EF0133268B@3x.png
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\Resources\appiconfore_2DC9A69F23A5DCE611DFEAE08AB0FE112E7DD050C9868A1196490DD1715082C6.png
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\appiconfore_D655A32D27CB0ACBEA785046FF9DA082F8F2739B0DACA9E2436E82CA4005DE08.png
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\appiconfore_D655A32D27CB0ACBEA785046FF9DA082F8F2739B0DACA9E2436E82CA4005DE08@2x.png
+C:\Users\mikey\RiderProjects\SendTracker\SendTracker\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\appiconfore_D655A32D27CB0ACBEA785046FF9DA082F8F2739B0DACA9E2436E82CA4005DE08@3x.png

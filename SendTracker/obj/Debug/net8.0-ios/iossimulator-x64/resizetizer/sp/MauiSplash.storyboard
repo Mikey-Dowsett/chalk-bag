@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="appiconfore_EFB7AA74E18E9E7A098258B3388BD6FF6AFD8A2C66D9D2DA8EAFB2EF0133268B.png" translatesAutoresizingMaskIntoConstraints="NO" id="aT4-1l-d9a">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="appiconfore_D655A32D27CB0ACBEA785046FF9DA082F8F2739B0DACA9E2436E82CA4005DE08.png" translatesAutoresizingMaskIntoConstraints="NO" id="aT4-1l-d9a">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -33,6 +33,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="appiconfore_EFB7AA74E18E9E7A098258B3388BD6FF6AFD8A2C66D9D2DA8EAFB2EF0133268B.png" />
+        <image name="appiconfore_D655A32D27CB0ACBEA785046FF9DA082F8F2739B0DACA9E2436E82CA4005DE08.png" />
     </resources>
 </document>

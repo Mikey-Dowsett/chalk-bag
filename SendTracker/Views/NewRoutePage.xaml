@@ -119,6 +119,9 @@
                                         <x:String>Flash</x:String>
                                         <x:String>Redpoint</x:String>
                                         <x:String>In Progress</x:String>
+                                        <x:String>2</x:String>
+                                        <x:String>3</x:String>
+                                        <x:String>4+</x:String>
                                     </x:Array>
                                 </Picker.ItemsSource>
                             </Picker>
