@@ -5,40 +5,46 @@
              x:Class="SendTracker.Views.SettingsPage"
              xmlns:viewmodel="clr-namespace:SendTracker.ViewModel"
              x:DataType="viewmodel:SettingsPageViewModel"
-             Title="Settings">
+             Title="Settings"
+             BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryLight},
+                Dark={StaticResource PrimaryDark}}">
 
     <ContentPage.Content>
-        <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" HorizontalOptions="Fill" VerticalOptions="Start"
+        <Grid RowDefinitions="*, *, *" HorizontalOptions="Fill" VerticalOptions="Start"
               Padding="25" RowSpacing="25">
+
             <Frame Grid.Row="0">
-                <Label Text="Tall Wall Grading Style" FontAttributes="Bold" />
-            </Frame>
-            <Frame Grid.Row="1" Margin="0, -25, 0, 0">
-                <Picker x:Name="TallWallGrade" SelectedIndex="{Binding TallWallGrade}">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Yosemite (5.10a)</x:String>
-                            <x:String>French (6a)</x:String>
-                            <x:String>UIAA (IV)</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
+                <Grid RowDefinitions="*, 2*">
+                    <Label Grid.Row="0" Text="Tall Wall Grading Style" FontAttributes="Bold" />
+                    <Picker Grid.Row="1" x:Name="TallWallGrade" SelectedIndex="{Binding TallWallGrade}"
+                            Margin="0, 15, 0, 0">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Yosemite (5.10a)</x:String>
+                                <x:String>French (6a)</x:String>
+                                <x:String>UIAA (IV)</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
             </Frame>
 
-            <Frame Grid.Row="2">
-                <Label Text="Boulder Grading Style" FontAttributes="Bold" />
+            <Frame Grid.Row="1">
+                <Grid RowDefinitions="*, 2*">
+                    <Label Grid.Row="0" Text="Boulder Grading Style" FontAttributes="Bold" />
+                    <Picker Grid.Row="1" x:Name="BoulderGrade" SelectedIndex="{Binding BoulderGrade}"
+                            Margin="0, 15, 0, 0">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>V-Grade (V4)</x:String>
+                                <x:String>Font (f6a)</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
             </Frame>
-            <Frame Grid.Row="3" Margin="0, -25, 0, 0">
-                <Picker x:Name="BoulderGrade" SelectedIndex="{Binding BoulderGrade}">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>V-Grade (V4)</x:String>
-                            <x:String>Font (f6a)</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
-            </Frame>
-            <Button Grid.Row="4" Text="Save" Command="{Binding SaveCommand}" />
+
+            <Button Grid.Row="2" Text="Save" Command="{Binding SaveCommand}" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

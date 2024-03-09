@@ -1,1 +1,0 @@
-C:\Users\mikey\RiderProjects\SendTracker\SendTracker\SendTracker.csproj;x64

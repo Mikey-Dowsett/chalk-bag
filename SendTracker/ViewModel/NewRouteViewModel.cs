@@ -1,18 +1,31 @@
 ﻿using System.ComponentModel;
 using System.Windows.Input;
+using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using SendTracker.Data;
 using SendTracker.Models;
-using SendTracker.Views;
 
 namespace SendTracker.ViewModel;
 
 [QueryProperty(nameof(RouteId), "Id")]
 public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChanged {
-    public event PropertyChangedEventHandler PropertyChanged;
+    private string duration;
+
+    private int falls;
+
+    private string mediaText = "Add Media";
+
+    private bool optionsVisible;
+
+    private int pitches;
+
+    private bool proposed;
+
+    private int rests;
     public int RouteId { get; set; }
-    
+
     public string? SendName { get; set; }
     public string? ClimbType { get; set; }
     public string? Grade { get; set; }
@@ -22,27 +35,24 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
     public string? RockType { get; set; }
     public string? PhotoPath { get; set; }
 
-    private string duration;
     public string? Duration {
         get => duration;
         set {
             duration = value;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Duration)));
-        } 
+        }
     }
 
-    private bool proposed;
     public bool Proposed {
         get => proposed;
         set {
             proposed = value;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Proposed)));
-        } 
+        }
     }
-    
+
     public ICommand OptionsCommand => new Command(ShowOptions);
-    
-    private bool optionsVisible = false;
+
     public bool OptionsVisible {
         get => optionsVisible;
         set {
@@ -51,8 +61,6 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(OptionsVisible)));
         }
     }
-
-    private string mediaText = "Add Media";
 
     public string MediaText {
         get => mediaText;
@@ -63,7 +71,6 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
         }
     }
 
-    private int pitches = 1;
     public int Pitches {
         get => pitches;
         set {
@@ -73,16 +80,36 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
         }
     }
 
+    public int Falls {
+        get => falls;
+        set {
+            if (falls == value) return;
+            falls = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Falls)));
+        }
+    }
+
+    public int Rests {
+        get => rests;
+        set {
+            if (rests == value) return;
+            rests = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Rests)));
+        }
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
     private void ShowOptions(object obj) {
         OptionsVisible = !OptionsVisible;
     }
-    
+
     [RelayCommand]
     private async Task TakePhoto(string mode) {
         if (MediaPicker.Default.IsCaptureSupported) {
             FileResult photo = null;
             switch (mode) {
-                case "photo": 
+                case "photo":
                     photo = await MediaPicker.CapturePhotoAsync();
                     break;
                 case "photos":
@@ -107,25 +134,24 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
             MediaText = PhotoPath == null ? "Add Media" : "Media Added";
         }
     }
-    
+
     [RelayCommand]
     public async Task SaveRoute() {
         bool result = true;
         string errorMessage = SendName == null ? "Missing Name!\n" : "";
         errorMessage += Notes == null ? "Missing Notes!\n" : "";
         errorMessage += PhotoPath == null ? "Missing Media!\n" : "";
-        if (SendName == null || Notes == null || PhotoPath == null) {
+        if (SendName == null || Notes == null || PhotoPath == null)
             result = await Shell.Current.DisplayAlert("Continue?",
                 errorMessage, "Yes", "No");
-        }
 
-        if (result == true) {
+        if (result) {
             RoutesDatabase database = new();
             if (Proposed) Grade += "*";
             Route route = null;
             if (RouteId == 0) {
-                route = new(SendName, ClimbType, Grade, Technique, Attempts, Notes, RockType, PhotoPath,
-                    DateTime.Now, Duration, Pitches, Proposed);
+                route = new Route(SendName, ClimbType, Grade, Technique, Attempts, Notes, RockType, PhotoPath,
+                    DateTime.Now, Duration, Pitches, Proposed, rests, falls);
             }
             else {
                 route = await database.GetRouteAsync(RouteId);
@@ -140,12 +166,21 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
                 route.Duration = Duration;
                 route.Pitches = Pitches;
                 route.Proposed = Proposed;
+                route.Falls = Falls;
+                route.Rests = Rests;
+                route.LoadEmoji();
             }
+
             await database.SaveRouteAsync(route);
             if (route.SendName == null || route.SendName == string.Empty) {
                 route.SendName = $"Climb {route.Id}";
                 await database.SaveRouteAsync(route);
             }
+
+            CancellationTokenSource cancellationToken = new();
+            IToast toast = Toast.Make("Route Saved!", ToastDuration.Short, 25);
+            await toast.Show(cancellationToken.Token);
+
             await Shell.Current.GoToAsync("..");
         }
     }

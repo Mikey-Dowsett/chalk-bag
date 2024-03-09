@@ -24,17 +24,7 @@ public partial class MainViewModel : ObservableObject {
         RoutesDatabase database = new();
         List<Route> newRoutes = await database.GetRoutesAsync();
         Routes.Clear();
-        foreach (Route route in newRoutes) {
-            Routes.Add(route);
-            Console.WriteLine(route.ToString());
-        }
-    }
-
-    [RelayCommand]
-    private async Task DeleteData() {
-        RoutesDatabase database = new();
-        await database.DeleteDatabase();
-        DisplayCurrentRoutes();
+        foreach (Route route in newRoutes) Routes.Add(route);
     }
 
     [RelayCommand]

@@ -31,8 +31,8 @@ public final class R {
 		public static final int androidx_core_secondary_text_default_material_light = 0x7f05001c;
 		public static final int call_notification_answer_color = 0x7f05002d;
 		public static final int call_notification_decline_color = 0x7f05002e;
-		public static final int notification_action_color_filter = 0x7f0502d7;
-		public static final int notification_icon_bg_color = 0x7f0502d8;
+		public static final int notification_action_color_filter = 0x7f0502d8;
+		public static final int notification_icon_bg_color = 0x7f0502d9;
 	}
 	public static final class dimen {
 		public static final int compat_button_inset_horizontal_material = 0x7f060058;
@@ -59,12 +59,12 @@ public final class R {
 		public static final int notification_top_pad_large_text = 0x7f060300;
 	}
 	public static final class drawable {
-		public static final int ic_call_answer = 0x7f07008b;
-		public static final int ic_call_answer_low = 0x7f07008c;
-		public static final int ic_call_answer_video = 0x7f07008d;
-		public static final int ic_call_answer_video_low = 0x7f07008e;
-		public static final int ic_call_decline = 0x7f07008f;
-		public static final int ic_call_decline_low = 0x7f070090;
+		public static final int ic_call_answer = 0x7f07008c;
+		public static final int ic_call_answer_low = 0x7f07008d;
+		public static final int ic_call_answer_video = 0x7f07008e;
+		public static final int ic_call_answer_video_low = 0x7f07008f;
+		public static final int ic_call_decline = 0x7f070090;
+		public static final int ic_call_decline_low = 0x7f070091;
 		public static final int notification_action_background = 0x7f0700da;
 		public static final int notification_bg = 0x7f0700db;
 		public static final int notification_bg_low = 0x7f0700dc;

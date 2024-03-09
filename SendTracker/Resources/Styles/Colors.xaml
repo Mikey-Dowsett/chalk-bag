@@ -5,11 +5,13 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Color x:Key="PrimaryLight">#F2F3ED</Color>
-    <Color x:Key="SecondaryLight">#E0D4BE</Color>
+    <Color x:Key="PrimaryLight">#FFFFFF</Color>
+    <Color x:Key="SecondaryLight">#EEEEEE</Color>
 
     <Color x:Key="PrimaryDark">#151513</Color>
+    <Color x:Key="SecondaryDark">#30302B</Color>
 
     <Color x:Key="Action">#778E69</Color>
+    <Color x:Key="ActionDark">#5F7254</Color>
 
 </ResourceDictionary>

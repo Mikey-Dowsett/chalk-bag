@@ -5,8 +5,5 @@ public partial class App : Application {
         InitializeComponent();
 
         MainPage = new AppShell();
-
-        Current.UserAppTheme = AppTheme.Light;
-        RequestedThemeChanged += (s, e) => { Current.UserAppTheme = AppTheme.Light; };
     }
 }

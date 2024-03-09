@@ -17,12 +17,42 @@ public partial class RoutePage : ContentPage {
         Title = route.SendName;
         ClimbType.Text = $"{route.ClimbType}";
         Grade.Text = $"{route.Grade}";
-        Attempts.Text = $"{route.Attempts}";
-        Technique.Text = $"{route.Technique}";
-        RockType.Text = $"{route.RockType}";
         Date.Text = $"{route.Date}";
-        Duration.Text = $"{route.Duration}";
-        Pitches.Text = $"{route.Pitches}";
+
+        if (route.Attempts == null)
+            AttemptsParent.IsVisible = false;
+        else
+            Attempts.Text = $"{route.Attempts}";
+
+        if (route.Technique == null)
+            TechniqueParent.IsVisible = false;
+        else
+            Technique.Text = $"{route.Technique}";
+
+        if (route.RockType == null)
+            RockTypeParent.IsVisible = false;
+        else
+            RockType.Text = $"{route.RockType}";
+
+        if (route.Duration == null)
+            DurationParent.IsVisible = false;
+        else
+            Duration.Text = $"{route.Duration}";
+
+        if (route.Pitches == 0)
+            PitchesParent.IsVisible = false;
+        else
+            Pitches.Text = $"{route.Pitches}";
+
+        if (route.Falls == 0)
+            FallsParent.IsVisible = false;
+        else
+            Falls.Text = $"{route.Falls}";
+
+        if (route.Rests == 0)
+            RestsParent.IsVisible = false;
+        else
+            Rests.Text = $"{route.Rests}";
 
         if (route.Notes == null)
             Notes.IsVisible = false;
