@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics;
 using System.Windows.Input;
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
@@ -125,10 +126,16 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
 
             if (photo != null) {
                 //Save the file into storage
-                PhotoPath = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
-                using Stream sourceStream = await photo.OpenReadAsync();
-                using FileStream localFileStream = File.OpenWrite(PhotoPath);
-                await sourceStream.CopyToAsync(localFileStream);
+                PhotoPath = photo.FileName;
+                string imagePath = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
+                using (Stream sourceStream = await photo.OpenReadAsync()) {
+                    using (FileStream localFileStream = File.OpenWrite(imagePath)) {
+                        await sourceStream.CopyToAsync(localFileStream);
+                    }
+                }
+                
+                SupabaseSessionHandler sessionHandler = new();
+                await sessionHandler.UploadPhoto(imagePath, photo.FileName);
             }
 
             MediaText = PhotoPath == null ? "Add Media" : "Media Added";
@@ -146,15 +153,20 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
                 errorMessage, "Yes", "No");
 
         if (result) {
-            RoutesDatabase database = new();
+            SupabaseSessionHandler sessionHandler = new();
             if (Proposed) Grade += "*";
             Route route = null;
             if (RouteId == 0) {
                 route = new Route(SendName, ClimbType, Grade, Technique, Attempts, Notes, RockType, PhotoPath,
                     DateTime.Now, Duration, Pitches, Proposed, rests, falls);
+                await sessionHandler.CreateRoute(route);
+                if (route.SendName == null || route.SendName == string.Empty) {
+                    route.SendName = $"Climb {route.Id}";
+                    await sessionHandler.UpdateRoute(route, route.Id);
+                }
             }
             else {
-                route = await database.GetRouteAsync(RouteId);
+                route = await sessionHandler.GetRoute(RouteId);
                 route.SendName = SendName;
                 route.ClimbType = ClimbType;
                 route.Grade = Grade;
@@ -169,13 +181,14 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
                 route.Falls = Falls;
                 route.Rests = Rests;
                 route.LoadEmoji();
+                try {
+                    await sessionHandler.UpdateRoute(route, route.Id);
+                }
+                catch (Exception ex) {
+                    Debug.WriteLine(ex.Message);
+                }
             }
 
-            await database.SaveRouteAsync(route);
-            if (route.SendName == null || route.SendName == string.Empty) {
-                route.SendName = $"Climb {route.Id}";
-                await database.SaveRouteAsync(route);
-            }
 
             CancellationTokenSource cancellationToken = new();
             IToast toast = Toast.Make("Route Saved!", ToastDuration.Short, 25);

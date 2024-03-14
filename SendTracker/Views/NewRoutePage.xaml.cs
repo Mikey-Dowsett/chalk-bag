@@ -53,6 +53,7 @@ public partial class NewRoutePage {
             RouteName.Text = null;
             RouteDescription.Text = null;
             ClimbType.SelectedIndex = 3;
+            Attempts.SelectedIndex = 3;
             vm.PhotoPath = null;
             vm.OptionsVisible = false;
             SelectGrade();
@@ -64,8 +65,8 @@ public partial class NewRoutePage {
 
     private async Task LoadRoute() {
         Title = "Edit Route";
-        RoutesDatabase database = new();
-        Route route = await database.GetRouteAsync(vm.RouteId);
+        SupabaseSessionHandler sessionHandler = new();
+        Route route = await sessionHandler.GetRoute(vm.RouteId);
         RouteName.Text = route.SendName;
         RouteDescription.Text = route.Notes;
         ClimbType.SelectedItem = route.ClimbType;
@@ -73,11 +74,11 @@ public partial class NewRoutePage {
         Attempts.SelectedItem = route.Attempts;
         RockType.SelectedItem = route.RockType;
 
-        vm.Proposed = route.Proposed;
-        vm.Pitches = route.Pitches;
+        vm.Proposed = (bool)route.Proposed;
+        vm.Pitches = (int)route.Pitches;
         vm.Duration = route.Duration;
-        vm.Falls = route.Falls;
-        vm.Rests = route.Rests;
+        vm.Falls = (int)route.Falls;
+        vm.Rests = (int)route.Rests;
         vm.PhotoPath = route.PhotoPath;
         if (vm.PhotoPath != null) vm.MediaText = "Media Added";
         vm.OptionsVisible = false;

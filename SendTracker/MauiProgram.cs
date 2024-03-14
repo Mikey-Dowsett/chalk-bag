@@ -1,8 +1,8 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
-using SendTracker.Data;
 using SendTracker.ViewModel;
 using SendTracker.Views;
+using Supabase;
 
 namespace SendTracker;
 
@@ -17,8 +17,8 @@ public static class MauiProgram {
                 fonts.AddFont("Nunito-Bold.ttf", "NunitoBold");
             });
 
-        builder.Services.AddSingleton<MainPage>();
-        builder.Services.AddSingleton<MainViewModel>();
+        builder.Services.AddSingleton<HomePage>();
+        builder.Services.AddSingleton<HomeViewModel>();
 
         builder.Services.AddSingleton<SettingsPage>();
         builder.Services.AddSingleton<SettingsPageViewModel>();
@@ -29,7 +29,14 @@ public static class MauiProgram {
         builder.Services.AddTransient<RoutePage>();
         builder.Services.AddTransient<RoutePageViewModel>();
 
-        builder.Services.AddSingleton<RoutesDatabase>();
+        string url = Environment.GetEnvironmentVariable("SUPABASE_URL");
+        string key = Environment.GetEnvironmentVariable("SUPABASE_KEY");
+        SupabaseOptions options = new() {
+            AutoRefreshToken = true,
+            AutoConnectRealtime = true
+        };
+
+        builder.Services.AddSingleton(provider => new Client(url, key, options));
 
 #if DEBUG
         builder.Logging.AddDebug();

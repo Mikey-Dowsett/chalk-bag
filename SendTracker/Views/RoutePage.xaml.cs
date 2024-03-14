@@ -1,4 +1,6 @@
-﻿using SendTracker.Models;
+﻿using CommunityToolkit.Maui.Converters;
+using SendTracker.Data;
+using SendTracker.Models;
 using SendTracker.ViewModel;
 
 namespace SendTracker.Views;
@@ -63,8 +65,9 @@ public partial class RoutePage : ContentPage {
             Photo.IsVisible = false;
         }
         else {
-            Photo.Source = new FileImageSource();
-            Photo.Source = ImageSource.FromFile(route.PhotoPath);
+            SupabaseSessionHandler sessionHandler = new();
+            MemoryStream stream = await sessionHandler.DownloadPhoto(route.PhotoPath);
+            Photo.Source = ImageSource.FromStream(() => stream);
         }
     }
 }
