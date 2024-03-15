@@ -17,6 +17,9 @@ public static class MauiProgram {
                 fonts.AddFont("Nunito-Bold.ttf", "NunitoBold");
             });
 
+        builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddSingleton<MainPageViewModel>();
+
         builder.Services.AddSingleton<HomePage>();
         builder.Services.AddSingleton<HomeViewModel>();
 

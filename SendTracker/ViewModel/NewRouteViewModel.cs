@@ -133,9 +133,8 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
                         await sourceStream.CopyToAsync(localFileStream);
                     }
                 }
-                
-                SupabaseSessionHandler sessionHandler = new();
-                await sessionHandler.UploadPhoto(imagePath, photo.FileName);
+
+                await SupabaseSessionHandler.UploadPhoto(imagePath, photo.FileName);
             }
 
             MediaText = PhotoPath == null ? "Add Media" : "Media Added";
@@ -153,20 +152,19 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
                 errorMessage, "Yes", "No");
 
         if (result) {
-            SupabaseSessionHandler sessionHandler = new();
             if (Proposed) Grade += "*";
             Route route = null;
             if (RouteId == 0) {
                 route = new Route(SendName, ClimbType, Grade, Technique, Attempts, Notes, RockType, PhotoPath,
                     DateTime.Now, Duration, Pitches, Proposed, rests, falls);
-                await sessionHandler.CreateRoute(route);
+                await SupabaseSessionHandler.CreateRoute(route);
                 if (route.SendName == null || route.SendName == string.Empty) {
                     route.SendName = $"Climb {route.Id}";
-                    await sessionHandler.UpdateRoute(route, route.Id);
+                    await SupabaseSessionHandler.UpdateRoute(route, route.Id);
                 }
             }
             else {
-                route = await sessionHandler.GetRoute(RouteId);
+                route = await SupabaseSessionHandler.GetRoute(RouteId);
                 route.SendName = SendName;
                 route.ClimbType = ClimbType;
                 route.Grade = Grade;
@@ -182,7 +180,7 @@ public partial class NewRouteViewModel : ObservableObject, INotifyPropertyChange
                 route.Rests = Rests;
                 route.LoadEmoji();
                 try {
-                    await sessionHandler.UpdateRoute(route, route.Id);
+                    await SupabaseSessionHandler.UpdateRoute(route, route.Id);
                 }
                 catch (Exception ex) {
                     Debug.WriteLine(ex.Message);

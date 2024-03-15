@@ -1,5 +1,6 @@
 ﻿using Postgrest.Attributes;
 using Postgrest.Models;
+using SendTracker.Data;
 
 namespace SendTracker.Models;
 
@@ -24,6 +25,7 @@ public class Route : BaseModel {
         Proposed = proposed;
         Rests = rests;
         Falls = falls;
+        UserId = SupabaseSessionHandler.Session.User.Id;
 
         LoadEmoji();
     }
@@ -44,6 +46,7 @@ public class Route : BaseModel {
     [Column("falls")] public int? Falls { get; set; }
     [Column("rests")] public int? Rests { get; set; }
     [Column("attempt_emoji")] public string? AttemptEmoji { get; set; }
+    [Column("user_id")] public string? UserId { get; set; }
 
     public override string ToString() {
         return $"{SendName}, {ClimbType}, {Grade}";

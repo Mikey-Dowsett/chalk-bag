@@ -21,9 +21,8 @@ public partial class HomeViewModel : ObservableObject {
 
     [RelayCommand]
     private async Task DisplayCurrentRoutes() {
-        SupabaseSessionHandler sessionHandler = new();
         Routes.Clear();
-        List<Route> routes = await sessionHandler.GetRoute();
+        List<Route> routes = await SupabaseSessionHandler.GetRoute();
         foreach (Route route in routes) Routes.Add(route);
     }
 

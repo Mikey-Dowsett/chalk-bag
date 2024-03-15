@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using SendTracker.Data;
 using SendTracker.Models;
@@ -26,8 +25,7 @@ public partial class RoutePageViewModel : ObservableObject {
     }
 
     private async Task<Route> LoadCurrentRoute() {
-        SupabaseSessionHandler sessionHandler = new();
-        route = await sessionHandler.GetRoute(Id);
+        route = await SupabaseSessionHandler.GetRoute(Id);
         return route;
     }
 
@@ -35,9 +33,8 @@ public partial class RoutePageViewModel : ObservableObject {
     public async Task DeleteCurrentRoute() {
         string action = await Shell.Current.CurrentPage.DisplayActionSheet("Delete Route", "Cancel", "Delete");
         if (action.Equals("Delete")) {
-            SupabaseSessionHandler sessionHandler = new();
-            await sessionHandler.DeletePhoto(route.PhotoPath);
-            await sessionHandler.DeleteRoute(route.Id);
+            await SupabaseSessionHandler.DeletePhoto(route.PhotoPath);
+            await SupabaseSessionHandler.DeleteRoute(route.Id);
             await Shell.Current.GoToAsync("..");
         }
     }

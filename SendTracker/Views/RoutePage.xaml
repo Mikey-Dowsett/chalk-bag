@@ -9,10 +9,9 @@
              Title="Route Page"
              BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryLight},
                 Dark={StaticResource PrimaryDark}}">
-    
+
     <ContentPage.Resources>
         <ResourceDictionary>
-            <toolkit:ByteArrayToImageSourceConverter x:Key="ByteArrayToImageSourceConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
 

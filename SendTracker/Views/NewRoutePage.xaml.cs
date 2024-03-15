@@ -65,8 +65,7 @@ public partial class NewRoutePage {
 
     private async Task LoadRoute() {
         Title = "Edit Route";
-        SupabaseSessionHandler sessionHandler = new();
-        Route route = await sessionHandler.GetRoute(vm.RouteId);
+        Route route = await SupabaseSessionHandler.GetRoute(vm.RouteId);
         RouteName.Text = route.SendName;
         RouteDescription.Text = route.Notes;
         ClimbType.SelectedItem = route.ClimbType;

@@ -1,5 +1,4 @@
-﻿using CommunityToolkit.Maui.Converters;
-using SendTracker.Data;
+﻿using SendTracker.Data;
 using SendTracker.Models;
 using SendTracker.ViewModel;
 
@@ -65,8 +64,7 @@ public partial class RoutePage : ContentPage {
             Photo.IsVisible = false;
         }
         else {
-            SupabaseSessionHandler sessionHandler = new();
-            MemoryStream stream = await sessionHandler.DownloadPhoto(route.PhotoPath);
+            MemoryStream stream = await SupabaseSessionHandler.DownloadPhoto(route.PhotoPath);
             Photo.Source = ImageSource.FromStream(() => stream);
         }
     }
