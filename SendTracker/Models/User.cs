@@ -11,7 +11,8 @@ public class User : BaseModel{
 
     public User() { }
 
-    public User(string userId) {
+    public User(string userId, string? username) {
         UserId = userId;
+        Username = username;
     }
 }

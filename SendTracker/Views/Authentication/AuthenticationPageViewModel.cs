@@ -11,6 +11,7 @@ namespace SendTracker.ViewModel;
 public partial class AuthenticationPageViewModel : ObservableObject, INotifyPropertyChanged {
     [ObservableProperty] private string? confirmPassword;
     [ObservableProperty] private string? email;
+    [ObservableProperty] private string? username;
 
     private bool loginEnabled = true;
     [ObservableProperty] private string? password;
@@ -73,7 +74,7 @@ public partial class AuthenticationPageViewModel : ObservableObject, INotifyProp
 
         await SessionHandler.SignUp(email, password);
         if (SessionHandler.UserSession != null) {
-            await UserHandler.CreateUser(new User(SessionHandler.UserSession.User.Id));
+            await UserHandler.CreateUser(new User(SessionHandler.UserSession.User.Id, username));
             LoadApp();
         }
 

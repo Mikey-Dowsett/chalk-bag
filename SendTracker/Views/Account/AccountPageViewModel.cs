@@ -16,8 +16,9 @@ public partial class AccountPageViewModel : ObservableObject {
         List<Route> routes = await RouteHandler.GetUserRoutes();
         foreach (Route route in routes) {
             MemoryStream memoryStream = await StorageHandler.DownloadPhoto(route.PhotoPath, route.UserId);
-            DisplayRoute newRoute = new(route.Id, route.UserId, route.SendName, route.Grade,
+            DisplayRoute newRoute = new(route.Id, route.SendName, route.Grade,
                 route.AttemptEmoji, route.Notes, route.Date, memoryStream);
+            await newRoute.InitializeAsync(route.UserId);
             Routes.Add(newRoute);
         }
     }

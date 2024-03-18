@@ -31,11 +31,12 @@
                                     Path=OpenRoutePageCommand}"
                                 CommandParameter="{Binding Id}" />
                         </Frame.GestureRecognizers>
-                        <Grid RowDefinitions="300, 1.5*, Auto, *" RowSpacing="10">
-                            <Image Grid.Row="0" Aspect="AspectFill" WidthRequest="350"
+                        <Grid RowDefinitions="1.5*, 300, 1.5*, Auto, *" RowSpacing="10">
+                            <Label Grid.Row="0" Text="{Binding User}" />
+                            <Image Grid.Row="1" Aspect="AspectFill" WidthRequest="350"
                                    Source="{Binding ThumbnailImageSource}" />
 
-                            <Label Grid.Row="1">
+                            <Label Grid.Row="2">
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <Span Text="{Binding SendName}" />
@@ -46,8 +47,8 @@
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
-                            <Label Grid.Row="2" Text="{Binding Notes}" FontSize="15" />
-                            <Label Grid.Row="3" Text="{Binding Date}" FontSize="10" />
+                            <Label Grid.Row="3" Text="{Binding Notes}" FontSize="15" />
+                            <Label Grid.Row="4" Text="{Binding Date}" FontSize="10" />
                         </Grid>
                     </Frame>
                 </DataTemplate>

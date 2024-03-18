@@ -32,7 +32,7 @@
                         Clicked="ChangeToCreateAccount" IsEnabled="{Binding LoginEnabled}" />
             </Grid>
 
-            <Grid RowDefinitions="*, *, *, *, *" VerticalOptions="Center" WidthRequest="300" RowSpacing="20"
+            <Grid RowDefinitions="*, *, *, *, *, *" VerticalOptions="Center" WidthRequest="300" RowSpacing="20"
                   IsVisible="False" x:Name="Signup" X="1000">
                 <Border Grid.Row="0" Stroke="{StaticResource SecondaryDark}" StrokeThickness="5"
                         StrokeShape="{RoundRectangle CornerRadius=25}">
@@ -44,12 +44,19 @@
                 <Border Grid.Row="1" Stroke="{StaticResource SecondaryDark}" StrokeThickness="5"
                         StrokeShape="{RoundRectangle CornerRadius=25}">
                     <Grid ColumnDefinitions="25, 200" ColumnSpacing="20" Margin="15">
+                        <Image Source="email.png" />
+                        <Entry Grid.Column="1" Placeholder="Email" Text="{Binding Username}" MaxLength="50" />
+                    </Grid>
+                </Border>
+                <Border Grid.Row="2" Stroke="{StaticResource SecondaryDark}" StrokeThickness="5"
+                        StrokeShape="{RoundRectangle CornerRadius=25}">
+                    <Grid ColumnDefinitions="25, 200" ColumnSpacing="20" Margin="15">
                         <Image Source="password.png" />
                         <Entry Grid.Column="1" Placeholder="Password" Text="{Binding Password}"
                                MaxLength="50" IsPassword="True" />
                     </Grid>
                 </Border>
-                <Border Grid.Row="2" Stroke="{StaticResource SecondaryDark}" StrokeThickness="5"
+                <Border Grid.Row="3" Stroke="{StaticResource SecondaryDark}" StrokeThickness="5"
                         StrokeShape="{RoundRectangle CornerRadius=25}">
                     <Grid ColumnDefinitions="25, 200" ColumnSpacing="20" Margin="15">
                         <Image Source="password.png" />
@@ -57,8 +64,8 @@
                                MaxLength="50" IsPassword="True" />
                     </Grid>
                 </Border>
-                <Button Grid.Row="3" Text="Sign Up" Command="{Binding SignUpCommand}" />
-                <Button Grid.Row="4" Text=" &#8592; Login" BorderWidth="0" FontSize="15"
+                <Button Grid.Row="4" Text="Sign Up" Command="{Binding SignUpCommand}" />
+                <Button Grid.Row="5" Text=" &#8592; Login" BorderWidth="0" FontSize="15"
                         Clicked="ChangeToCreateLogin" IsEnabled="{Binding SignUpEnabled}" />
             </Grid>
         </HorizontalStackLayout>
