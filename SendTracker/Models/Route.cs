@@ -1,8 +1,11 @@
-﻿using SQLite;
+﻿using Postgrest.Attributes;
+using Postgrest.Models;
+using SendTracker.Data;
 
 namespace SendTracker.Models;
 
-public class Route {
+[Table("Routes")]
+public class Route : BaseModel {
     public Route() { }
 
     public Route(string sendName, string climbType, string grade, string technique, string attempts, string notes,
@@ -22,26 +25,28 @@ public class Route {
         Proposed = proposed;
         Rests = rests;
         Falls = falls;
+        UserId = SessionHandler.UserSession.User.Id;
 
         LoadEmoji();
     }
 
-    [PrimaryKey] [AutoIncrement] public int Id { get; set; }
-    public string SendName { get; set; }
-    public string ClimbType { get; set; }
-    public string Grade { get; set; }
-    public string Technique { get; set; }
-    public string Attempts { get; set; }
-    public string Notes { get; set; }
-    public string RockType { get; set; }
-    public string PhotoPath { get; set; }
-    public DateTime Date { get; set; }
-    public string Duration { get; set; }
-    public int Pitches { get; set; }
-    public bool Proposed { get; set; }
-    public int Falls { get; set; }
-    public int Rests { get; set; }
-    public string AttemptEmoji { get; set; }
+    [PrimaryKey("id")] public int Id { get; set; }
+    [Column("send_name")] public string? SendName { get; set; }
+    [Column("climb_type")] public string? ClimbType { get; set; }
+    [Column("grade")] public string? Grade { get; set; }
+    [Column("technique")] public string? Technique { get; set; }
+    [Column("attempts")] public string? Attempts { get; set; }
+    [Column("notes")] public string? Notes { get; set; }
+    [Column("rock_type")] public string? RockType { get; set; }
+    [Column("photo_path")] public string? PhotoPath { get; set; }
+    [Column("date")] public DateTime? Date { get; set; }
+    [Column("duration")] public string? Duration { get; set; }
+    [Column("pitches")] public int? Pitches { get; set; }
+    [Column("proposed")] public bool? Proposed { get; set; }
+    [Column("falls")] public int? Falls { get; set; }
+    [Column("rests")] public int? Rests { get; set; }
+    [Column("attempt_emoji")] public string? AttemptEmoji { get; set; }
+    [Column("user_id")] public string? UserId { get; set; }
 
     public override string ToString() {
         return $"{SendName}, {ClimbType}, {Grade}";

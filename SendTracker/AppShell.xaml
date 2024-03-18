@@ -11,10 +11,10 @@
 
     <TabBar>
         <Tab Title="Routes" Icon="routes.png">
-            <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
+            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
         </Tab>
-        <Tab Title="Settings" Icon="settings.png">
-            <ShellContent ContentTemplate="{DataTemplate views:SettingsPage}" />
+        <Tab Title="Account" Icon="user.png">
+            <ShellContent ContentTemplate="{DataTemplate views:AccountPage}" />
         </Tab>
     </TabBar>
 

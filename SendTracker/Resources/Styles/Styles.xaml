@@ -41,11 +41,18 @@
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState x:Name="Normal" />
-                    <VisualState x:Name="Disabled" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="BorderColor"
+                                    Value="{AppThemeBinding Light={StaticResource SecondaryLight}, 
+                                    Dark={StaticResource SecondaryDark}}" />
+                        </VisualState.Setters>
+                    </VisualState>
                     <VisualState x:Name="Pressed">
                         <VisualState.Setters>
                             <Setter Property="BackgroundColor"
-                                    Value="{AppThemeBinding Light={StaticResource Action}, Dark={StaticResource ActionDark}}" />
+                                    Value="{AppThemeBinding Light={StaticResource Action}, 
+                                    Dark={StaticResource ActionDark}}" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
