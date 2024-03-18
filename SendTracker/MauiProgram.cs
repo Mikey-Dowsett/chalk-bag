@@ -17,11 +17,11 @@ public static class MauiProgram {
                 fonts.AddFont("Nunito-Bold.ttf", "NunitoBold");
             });
 
-        builder.Services.AddSingleton<MainPage>();
-        builder.Services.AddSingleton<MainPageViewModel>();
+        builder.Services.AddSingleton<AuthenticationPage>();
+        builder.Services.AddSingleton<AuthenticationPageViewModel>();
 
         builder.Services.AddSingleton<HomePage>();
-        builder.Services.AddSingleton<HomeViewModel>();
+        builder.Services.AddSingleton<HomePageViewModel>();
 
         builder.Services.AddSingleton<SettingsPage>();
         builder.Services.AddSingleton<SettingsPageViewModel>();
@@ -31,6 +31,9 @@ public static class MauiProgram {
 
         builder.Services.AddTransient<RoutePage>();
         builder.Services.AddTransient<RoutePageViewModel>();
+
+        builder.Services.AddSingleton<AccountPage>();
+        builder.Services.AddSingleton<AccountPageViewModel>();
 
         string url = Environment.GetEnvironmentVariable("SUPABASE_URL");
         string key = Environment.GetEnvironmentVariable("SUPABASE_KEY");

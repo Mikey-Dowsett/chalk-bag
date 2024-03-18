@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SendTracker.Views.HomePage"
+             xmlns:viewmodel="clr-namespace:SendTracker.ViewModel"
+             xmlns:model="clr-namespace:SendTracker.Models"
+             x:DataType="viewmodel:HomePageViewModel"
+             Title="Send Tracker"
+             BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryLight},
+                Dark={StaticResource PrimaryDark}}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="add.png" Command="{Binding OpenNewRouteCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <ContentView HorizontalOptions="Fill" Padding="20">
+        <CollectionView ItemsSource="{Binding Routes}" SelectionMode="None"
+                        HorizontalOptions="Fill">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" SnapPointsAlignment="Center"
+                                   SnapPointsType="None" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:DisplayRoute">
+                    <Frame>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomePageViewModel}}, 
+                                    Path=OpenRoutePageCommand}"
+                                CommandParameter="{Binding Id}" />
+                        </Frame.GestureRecognizers>
+                        <Grid RowDefinitions="300, 1.5*, Auto, *" RowSpacing="10">
+                            <Image Grid.Row="0" Aspect="AspectFill" WidthRequest="350"
+                                   Source="{Binding ThumbnailImageSource}" />
+
+                            <Label Grid.Row="1">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding SendName}" />
+                                        <Span Text=" - " />
+                                        <Span Text="{Binding Grade}" />
+                                        <Span Text=" - " />
+                                        <Span Text="{Binding AttemptEmoji}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label Grid.Row="2" Text="{Binding Notes}" FontSize="15" />
+                            <Label Grid.Row="3" Text="{Binding Date}" FontSize="10" />
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentView>
+
+</ContentPage>

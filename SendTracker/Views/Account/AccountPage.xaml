@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:SendTracker.ViewModel"
+             xmlns:model="clr-namespace:SendTracker.Models"
+             x:DataType="viewmodel:AccountPageViewModel"
+             x:Class="SendTracker.Views.AccountPage"
+             Title="Account"
+             BackgroundColor="{AppThemeBinding Light={StaticResource PrimaryLight},
+                Dark={StaticResource PrimaryDark}}">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="settings.png" Command="{Binding OpenSettingsPageCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <Grid RowDefinitions=".25*, .25*, .5*">
+            <Label Grid.Row="0" Text="Username" />
+            <Label Grid.Row="1" Text="Your Routes" VerticalOptions="End" />
+
+            <CollectionView Grid.Row="2" ItemsSource="{Binding Routes}" HorizontalOptions="Fill"
+                            ItemsLayout="VerticalGrid, 3">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:DisplayRoute">
+                        <Frame Margin="-18" CornerRadius="0">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command="{Binding Source={RelativeSource
+                                AncestorType={x:Type viewmodel:AccountPageViewModel}}, Path=OpenRoutePageCommand}"
+                                    CommandParameter="{Binding Id}" />
+                            </Frame.GestureRecognizers>
+
+                            <Image Aspect="AspectFill" Source="{Binding ThumbnailImageSource}"
+                                   MaximumHeightRequest="200" />
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

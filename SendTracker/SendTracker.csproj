@@ -31,7 +31,7 @@
 
     <ItemGroup>
         <!-- App Icon -->
-        <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources/AppIcon/appiconfore.svg" />
+        <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources/AppIcon/appiconfore.svg"/>
 
         <!-- Splash Screen -->
         <MauiSplashScreen Include="Resources\AppIcon\appiconfore.svg" Color="#151513"/>
@@ -52,18 +52,32 @@
         <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)"/>
         <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)"/>
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0"/>
-        <PackageReference Include="sqlite-net-pcl" Version="1.9.141-beta"/>
-        <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.8"/>
         <PackageReference Include="supabase-csharp" Version="0.16.0"/>
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Update="Views\NewRoutePage.xaml.cs">
+        <Compile Update="Views\AccountPage\AccountPage.xaml.cs">
+            <DependentUpon>AccountPage.xaml</DependentUpon>
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Views\AuthenticationPage\AuthenticationPage.xaml.cs">
+            <DependentUpon>AuthenticationPage.xaml</DependentUpon>
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Views\NewRoutePage\NewRoutePage.xaml.cs">
             <DependentUpon>NewRoutePage.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
-        <Compile Update="Views\HomePage.xaml.cs">
-            <DependentUpon>MainPage.xaml</DependentUpon>
+        <Compile Update="Views\Settings\SettingsPage.xaml.cs">
+            <DependentUpon>SettingsPage.xaml</DependentUpon>
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Views\Route\RoutePage.xaml.cs">
+            <DependentUpon>RoutePage.xaml</DependentUpon>
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Views\Home\HomePage.xaml.cs">
+            <DependentUpon>HomePage.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
     </ItemGroup>
@@ -72,10 +86,22 @@
         <MauiXaml Update="Platforms\Windows\App.xaml">
             <Generator>MSBuild:Compile</Generator>
         </MauiXaml>
-        <MauiXaml Update="Views\NewRoutePage.xaml">
+        <MauiXaml Update="Views\AccountPage\AccountPage.xaml">
             <SubType>Designer</SubType>
         </MauiXaml>
-        <MauiXaml Update="Views\HomePage.xaml">
+        <MauiXaml Update="Views\AuthenticationPage\AuthenticationPage.xaml">
+            <SubType>Designer</SubType>
+        </MauiXaml>
+        <MauiXaml Update="Views\NewRoutePage\NewRoutePage.xaml">
+            <SubType>Designer</SubType>
+        </MauiXaml>
+        <MauiXaml Update="Views\Settings\SettingsPage.xaml">
+            <SubType>Designer</SubType>
+        </MauiXaml>
+        <MauiXaml Update="Views\Route\RoutePage.xaml">
+            <SubType>Designer</SubType>
+        </MauiXaml>
+        <MauiXaml Update="Views\Home\HomePage.xaml">
             <SubType>Designer</SubType>
         </MauiXaml>
     </ItemGroup>

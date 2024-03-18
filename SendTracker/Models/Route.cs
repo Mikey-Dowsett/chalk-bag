@@ -25,7 +25,7 @@ public class Route : BaseModel {
         Proposed = proposed;
         Rests = rests;
         Falls = falls;
-        UserId = SupabaseSessionHandler.Session.User.Id;
+        UserId = SessionHandler.UserSession.User.Id;
 
         LoadEmoji();
     }

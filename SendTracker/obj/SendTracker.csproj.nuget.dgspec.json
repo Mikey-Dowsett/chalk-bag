@@ -86,14 +86,6 @@
               "version": "[8.0.1, )",
               "autoReferenced": true
             },
-            "SQLitePCLRaw.bundle_green": {
-              "target": "Package",
-              "version": "[2.1.8, )"
-            },
-            "sqlite-net-pcl": {
-              "target": "Package",
-              "version": "[1.9.141-beta, )"
-            },
             "supabase-csharp": {
               "target": "Package",
               "version": "[0.16.0, )"
@@ -148,14 +140,6 @@
               "target": "Package",
               "version": "[8.0.1, )",
               "autoReferenced": true
-            },
-            "SQLitePCLRaw.bundle_green": {
-              "target": "Package",
-              "version": "[2.1.8, )"
-            },
-            "sqlite-net-pcl": {
-              "target": "Package",
-              "version": "[1.9.141-beta, )"
             },
             "supabase-csharp": {
               "target": "Package",
@@ -212,14 +196,6 @@
               "version": "[8.0.1, )",
               "autoReferenced": true
             },
-            "SQLitePCLRaw.bundle_green": {
-              "target": "Package",
-              "version": "[2.1.8, )"
-            },
-            "sqlite-net-pcl": {
-              "target": "Package",
-              "version": "[1.9.141-beta, )"
-            },
             "supabase-csharp": {
               "target": "Package",
               "version": "[0.16.0, )"
@@ -269,14 +245,6 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.3, )"
-            },
-            "SQLitePCLRaw.bundle_green": {
-              "target": "Package",
-              "version": "[2.1.8, )"
-            },
-            "sqlite-net-pcl": {
-              "target": "Package",
-              "version": "[1.9.141-beta, )"
             },
             "supabase-csharp": {
               "target": "Package",

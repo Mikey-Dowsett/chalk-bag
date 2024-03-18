@@ -7,6 +7,6 @@ public partial class App : Application {
     public App() {
         InitializeComponent();
 
-        MainPage = new MainPage(new MainPageViewModel());
+        MainPage = new AuthenticationPage(new AuthenticationPageViewModel());
     }
 }
